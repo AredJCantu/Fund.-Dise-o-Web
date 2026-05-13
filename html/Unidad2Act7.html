@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <h1>¿Publicas tus fotos en linea?</h1>
+    <form>
+        <fieldset>
+        <p><em>100 personas han votado</em></p>
+        <input type="radio" id="r1" name="Encuesta"> <label for="r1">Si - Algunas</label><br>
+        <input type="radio" id="r2" name="Encuesta"> <label for="r2">Si - Todas</label><br>
+        <input type="radio" id="r3" name="Encuesta"> <label for="r3">Si - Las mejores - Algunas</label><br>
+        <input type="radio" id="r4" name="Encuesta"> <label for="r4">Si - Las mejores - Todas</label><br>
+        <input type="radio" id="r5" name="Encuesta"> <label for="r5">No - Nunca</label><br>
+        <input type="submit" value="Responder">
+        <input type="button" value="Ver resultados">
+    </fieldset>
+    <h2>Resultados:</h2>
+    <p>
+  <strong>Si - Las mejores - Algunas:</strong><br>
+  <progress value="35" max="100" id="ps1"></progress> <label for="ps1"><em>35%</em></label>
+</p>
+    <p>
+  <strong>Si - Las mejores - Todas:</strong><br>
+  <progress value="27" max="100" id="ps2"></progress> <label for="ps2"><em>27%</em></label>
+</p>
+    <p>
+  <strong>Si - Algunas:</strong><br>
+  <progress value="19" max="100" id="ps3"></progress> <label for="ps3"><em>19%</em></label>
+</p>
+<p>
+  <strong>No - Nunca:</strong><br>
+  <progress value="15" max="100" id="ps4"></progress><label for="ps4"><em>15%</em></label>
+</p>
+<p>
+  <strong>Si - Todas:</strong><br>
+  <progress value="4" max="100" id="ps5"></progress><label for="ps5"><em>4%</em></label>
+</p>
+    </form>
+</body>
+</html>

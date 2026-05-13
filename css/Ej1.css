@@ -1,0 +1,78 @@
+html,body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  /*Se comporta como un grid*/
+  display: grid;
+  /*3 renglones*/
+  grid-template-rows: 80px auto 20px;
+  margin: 0;
+  font-family: tahoma;
+}
+header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+header h1 {
+  font-weight: normal;
+  text-align: center;
+  font-size: x-large;
+}
+nav {
+  /*Combinacion de un wrappanel y stackpanel*/
+  display: flex;
+}
+nav a {
+  color: orangered;
+  text-decoration: none;
+  padding: 10px;
+  align-self: center;
+  text-transform: uppercase;
+  font-size: small;
+}
+/*Pseudoclases o eventos*/
+nav a:hover {
+  color: white;
+  background-color: orangered;
+}
+section#bienvenida{
+    background-image: url(imagen.jpg);
+    background-size: cover;
+    color: white;
+    padding: 50px 69% 150px 50px;
+}
+section#bienvenida h1{
+  font-size: x-large;
+}
+section#bienvenida p{
+  font-size: small;
+}
+section#bienvenida a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  font-size: small;
+  padding: 10px;
+  margin: 10px auto;
+  width: fit-content;
+}
+main{
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+#servicios{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+}
+#servicios h1{
+  font-size: large;
+  color: orangered;
+}
+footer{
+  background-color: orangered;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 20px auto;
+            width: 154px;
+            height: 304px;
+        }
+        div div{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            transition: transform 2s;
+            transform-origin: 50% 50%; /*Que empiece desde la mitad de x y y, no de 0, 0*/
+        }
+        #Rojo{
+            background-color: red;
+        }
+        #Verde{
+            background-color: green;
+        }
+        #Azul{
+            background-color: blue;
+        }
+        #Amarillo{
+            background-color: yellow;
+        }
+        #Rojo:hover{
+            transform: translate(100px , 75px);
+        }
+        #Verde:active{/*Mientras se mantenga presionado el click en el elemento*/
+
+            transform: rotate(120deg);/*Grados*/
+            transform: rotate(5turn);/*Vueltas*/
+            transform: rotate(0.5turn) translate(100px , 100px);/*Rotar y transformar*/
+            transform: translate(100px,100px) rotate(0.5turn); /*Transformar y rotar */
+            transform: rotateX(0deg) rotateY(180deg) rotateZ(30deg);
+
+            transform-origin: 0 0;
+            transform: rotate(10turn);  
+
+        }
+        #Azul:hover{
+            transform: scale(2);
+            transform: scale(0.5,0.7);
+        }
+        #Amarillo:hover{
+            transform: skew(10deg, 30deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="Rojo"></div>
+        <div id="Verde"></div>
+        <div id="Azul"></div>
+        <div id="Amarillo"></div>
+    </div>
+</body>
+</html>

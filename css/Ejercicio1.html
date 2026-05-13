@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamiento</title>
+  <style>
+    div{
+      position: relative;
+      border: 1px solid black;
+      padding: 5%;
+      width: 50%;
+      height: 2000px;
+      margin: auto;
+    }
+    div div{
+      height: 150px;
+      width: 100%;
+      padding: 0;
+    }
+      #Rojo{
+        background-color: red;
+        position: relative;/*Se mueve al nivel de el mismo,*/
+        top: 100px;
+        right: 100px;
+      }
+      #Verde{
+        background-color: green;
+        position: absolute;/*Lo saca del padre al nivel de html, deja de ser hijo del padre*/
+        left: 0;
+        bottom: 0;
+        width: 100px;
+        z-index: 3;
+      }
+      #Azul{
+        background-color: blue;
+        position: fixed;/*Funciona igual que el absoluto, solo que es fijo, se queda en la misma posicion de la pantalla*/
+        left: 0;
+        bottom: 0;
+        width: 150px;
+      }
+      #Amarillo{
+        background-color: yellow;
+        position: sticky;
+        top: 10px;/*Cuanto tamaño tiene arriba cuando se pega*/
+      }
+      #Rosa{
+        background-color: pink;
+        position: absolute;/*posicionamiento abolutamente relativo, es cuando el padre tiene relativo, y el hijo tiene absoluto
+        ,toma el valor del padre y no de html
+        */
+        right: 0;
+        top: 0;
+        width: 200px;
+      }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="Rojo"></div>
+    <div id="Verde"></div>
+    <div id="Azul"></div>
+    <div id="Amarillo"></div>
+    <div id="Rosa"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 10</title>
+  </head>
+  <body>
+    <header>
+      <h1>Esquema de colores</h1>
+      <p>De wikipedia, la enciclopedia líbre</p>
+      <p>
+        Un <strong>Esquema de colores</strong> es un conjunto de colores
+        elegidos con fines estéticos o comunicativos, basado en las relaciones
+        del círculo cromático.
+      </p>
+    </header>
+    <nav>
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#Monocromatico">Monocromático</a></li>
+        <li><a href="#Analogo">Análogo</a></li>
+        <li><a href="#Complementario">Complementario</a></li>
+        <li><a href="#Triádico">Triádico</a></li>
+        <li><a href="#Neutros">Neutros</a></li>
+      </ol>
+    </nav>
+    <main>
+      <article id="Monocromatico">
+        <h2>Monocromatico</h2>
+        <p>
+          Usa un solo color base con variaciones de saturación y luminosidad.
+          Sensación de unidad y elegancia.
+        </p>
+        <p>
+          <svg height="50">
+            <rect x="10" y="10" width="20" height="20" fill="#234E7D"></rect>
+            <rect x="35" y="10" width="20" height="20" fill="#4174A5"></rect>
+            <rect x="60" y="10" width="20" height="20" fill="#6FA0D8"></rect>
+            <rect x="85" y="10" width="20" height="20" fill="#A5C9ED"></rect>
+            <rect x="110" y="10" width="20" height="20" fill="#0D263D"></rect>
+          </svg>
+        </p>
+      </article>
+      <article id="Analogo">
+        <h2>Análogo</h2>
+        <p>
+          Colores adyacentes en el círculo cromático. Bajo contraste, armonía
+          natural.
+        </p>
+        <div id="Ejemplo_1">
+          <p>
+            <svg height="30" width="30">
+              <rect x="10" y="10" width="20" height="20" fill="#f2d53c"></rect>
+            </svg>
+            Amarillo (#f2d53c)
+          </p>
+          <p>
+            <svg height="30" width="30">
+              <rect x="10" y="10" width="20" height="20" fill="#b5d33c"></rect>
+            </svg>
+            Verde Amarillento (#b5d33c)
+          </p>
+          <p>
+            <svg height="30" width="30">
+              <rect x="10" y="10" width="20" height="20" fill="#6fb35b"></rect>
+            </svg>
+            Verde (#6fb35b)
+          </p>
+        </div>
+      </article>
+      <article id="Complementario">
+        <h2>Complementario</h2>
+        <p>Colores opuestos en el círculo (ej: rojo-verde). Alto contraste y dinamismo</p>
+        <table border="1">
+          <thead>
+            <th>Color 1</th>
+            <th>Color 2</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <svg width="30" height="20">
+                  <rect width="20" height="20" x="5" y="5" fill="Red"></rect>
+                </svg>
+                Rojo
+              </td>
+              <td>
+                <svg width="30" height="20">
+                  <rect width="20" height="20" x="5" y="5" fill="Green"></rect>
+                </svg>
+                Verde
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <svg width="30" height="20">
+                  <rect width="20" height="20" x="5" y="5" fill="Blue"></rect>
+                </svg>
+                Azul
+              </td>
+              <td>
+                <svg width="30" height="20">
+                  <rect width="20" height="20" x="5" y="5" fill="Orange"></rect>
+                </svg>
+                Naranja
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article id="Triádico">
+        <h2>Tirádico</h2>
+        <p>Tres colores equidistantes (triángulo en el círculo). Equilibrio y vitalidad.</p>
+        <div id="Ejemplo_2">
+          <svg height="30">
+            <rect width="20" height="20" x="5" y="5" fill="Red"></rect>
+            <rect width="20" height="20" x="30" y="5" fill="Yellow"></rect>
+            <rect width="20" height="20" x="55" y="5" fill="Blue"></rect>
+          </svg>
+        </div>
+        <p>Ej: rojo, amarillo, azul.</p>
+      </article>
+      <article id="Neutros">
+        <h2>Acromáticos / Neutros</h2>
+        <p>Blancos, negros, grises y tierras. Minimalismo y sofisticación.</p>
+        <div>
+          <svg height="30">
+            <rect width="20" height="20" x="5" y="5" fill="White"></rect>
+            <rect width="20" height="20" x="30" y="5" fill="#CCCCCC"></rect>
+            <rect width="20" height="20" x="55" y="5" fill="#888888"></rect>
+            <rect width="20" height="20" x="80" y="5" fill="#444444"></rect>
+            <rect width="20" height="20" x="105" y="5" fill="Black"></rect>
+          </svg>
+        </div>
+      </article>
+    </main>
+    <footer>
+     <div id="Referencias">
+      <h2>Referencias</h2>
+      <ol>
+        <li>Wong, W. <cite>Principios del diseño en color.</cite> GG, 2006</li>
+        <li>Heller, E. <cite>Psicología del color.</cite> GG, 2004</li>
+      </ol>
+     </div>
+     <div>
+      <p>
+        <em>Çontacto: <a href="info@ejemplo.org">info@ejemplo.org</a> </em>
+        <p><small>Versión simplificada estilo Wikipedia.</small></p>
+      </p>
+     </div>
+    </footer>
+  </body>
+</html>

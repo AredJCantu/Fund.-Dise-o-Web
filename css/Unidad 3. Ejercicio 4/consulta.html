@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta — Salford & Co.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="top-bar">
+    <nav>
+      <a href="#">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        <span>SALFORD &amp; CO.</span>
+      </a>
+
+      <ul>
+        <li><a href="cita.html">Programar cita</a></li>
+        <li><a href="consulta.html" class="active">Consulta</a></li>
+        <li><a href="expediente.html">Expediente</a></li>
+        <li><a href="admision.html">Admisión</a></li>
+      </ul>
+    </nav>
+
+    <div class="doctor-info">
+      <strong>Dr. Daniel Gallego</strong>
+      <span>Medicina General</span>
+    </div>
+  </header>
+
+  <main>
+
+      <div class="form-header">
+          <h1>Registro de consulta</h1>
+          <p>Salford &amp; Co. — <span>REF-CONSULTA-2024</span></p>
+      </div>
+
+      <form method="post">
+
+          <fieldset>
+              <legend>Ficha de identificación del paciente</legend>
+
+              <label for="nombre">
+                  Nombre completo del paciente
+                  <input type="text" id="nombre" name="nombre" placeholder="Apellidos, Nombres" />
+              </label>
+
+              <label for="expediente">
+                  Número de expediente
+                  <input type="text" id="expediente" name="expediente" placeholder="HC-00000" />
+              </label>
+
+              <label for="nacimiento">
+                  Fecha de nacimiento
+                  <input type="date" id="nacimiento" name="nacimiento" />
+              </label>
+
+              <label for="curp">
+                  CURP / ID Oficial
+                  <input type="text" id="curp" name="curp" placeholder="Documento de identidad" />
+              </label>
+
+              <fieldset class="radio-group">
+                  <legend>Sexo</legend>
+                  <label><input type="radio" name="sexo" value="masculino" /> Masculino</label>
+                  <label><input type="radio" name="sexo" value="femenino" /> Femenino</label>
+                  <label><input type="radio" name="sexo" value="otro" /> Otro</label>
+              </fieldset>
+
+              <fieldset class="radio-group">
+                  <legend>Género</legend>
+                  <label><input type="radio" name="genero" value="hombre" /> Hombre</label>
+                  <label><input type="radio" name="genero" value="mujer" /> Mujer</label>
+                  <label><input type="radio" name="genero" value="otro" /> Otro</label>
+              </fieldset>
+
+          </fieldset>
+
+          <fieldset>
+              <legend>Examen físico y sintomatología</legend>
+
+              <label for="motivo">
+                  Motivo de la consulta
+                  <input type="text" id="motivo" name="motivo" placeholder="Diagnóstico presuntivo o motivo reportado" />
+              </label>
+
+              <label for="observaciones">
+                  Observaciones clínicas
+                  <input type="text" id="observaciones" name="observaciones" placeholder="Notas del médico tratante" />
+              </label>
+
+              <label for="gravedad">
+                  Gravedad del cuadro
+                  <input type="range" id="gravedad" name="gravedad" min="0" max="2" step="1" />
+                  <span>Ambulatorio — Urgencia — Emergencia</span>
+              </label>
+
+          </fieldset>
+
+          <fieldset>
+              <legend>Signos vitales</legend>
+
+              <label for="presion">
+                  Presión arterial (mmHg)
+                  <input type="text" id="presion" name="presion" placeholder="--" />
+              </label>
+
+              <label for="temperatura">
+                  Temperatura (°C)
+                  <input type="text" id="temperatura" name="temperatura" placeholder="--" />
+              </label>
+
+              <label for="frecuencia">
+                  Frecuencia cardíaca
+                  <input type="text" id="frecuencia" name="frecuencia" placeholder="--" />
+              </label>
+
+              <label for="saturacion">
+                  Saturación O2
+                  <input type="text" id="saturacion" name="saturacion" placeholder="--" />
+              </label>
+
+          </fieldset>
+
+          <div class="form-actions">
+            <span>Acceso restringido a personal médico autorizado</span>
+              <button type="reset" class="btn--ghost">Limpiar</button>
+              <button type="submit" class="btn--primary">Guardar en expediente</button>
+          </div>
+
+      </form>
+  </main>
+
+</body>
+</html>

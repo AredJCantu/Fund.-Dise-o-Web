@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cuadro1{
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellow;
+            transition-property: all;
+            transition-duration: 1.2s;
+            transition-timing-function: ease-in;
+            
+            position: relative;
+            left: 0;
+
+        }
+        #cuadro1:focus{
+            background-color: purple;
+            width: 180px;
+            width: 180px;
+            left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="cuadro1">
+        <h2>cuadro</h2>
+    </button>
+</body>
+</html>

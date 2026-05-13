@@ -1,0 +1,45 @@
+:root{
+    --colorPrimario:#2C3E50;
+    --suavePrimario:#42586E;
+    --colorComplementario1:#E67E22;
+    --suaveComplementario1:#F49C4D;
+    --colorComplementario2:#ECF0F1;
+    --fuente:'Arial';
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--colorComplementario2);
+}
+header nav{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--colorPrimario);
+}
+header nav img{
+    width: 70px;
+    margin: 10px 20px;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0px 20px;
+}
+header nav ul a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--fuente);
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+header nav ul a:hover, header nav ul a:active{
+    background-color: var(--suavePrimario);
+    font-weight: bold;
+}

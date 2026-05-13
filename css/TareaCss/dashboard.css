@@ -1,0 +1,467 @@
+:root{
+    --fondo:#F4F5FA;
+    --oscuro:#4F485C;
+    --colorPrimario:#8C57FF;
+    --rojo:#FF4C51;
+    --textoSecundario:#AFA8B1;
+    --colorBorde:#D1CFD4;
+    --azul:#16B1FF;
+    --verde:#60CD0F;
+    --verdeClaro:#E4F7D6;
+    --naranja:#FFCF5C;
+    --naranjaFuerte:#FFB400;
+    font-family: Arial, Helvetica, sans-serif;
+    --primarioClaro:#EDE4FF;
+}
+html,body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+}
+body{
+    display: grid;
+    grid-template-columns: auto 1fr ;
+    grid-template-rows: auto 1fr;
+}
+.dashboard-header{
+    z-index: 10;
+    grid-column: 2;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--fondo);
+    grid-row: 1;
+    display: flex;
+    padding:20px;
+    height: 40px;
+    justify-content: space-between;
+}
+.buscador{
+    color: var(--textoSecundario);
+    align-content: center;
+    border: none;
+    text-decoration: none;  
+}
+i{
+    color: var(--oscuro);
+}
+.buscador input{
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+    border: none;
+    background-color: var(--fondo);
+}
+.header-actions{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+/*No puse gap, ya que utilizo la posicion del span "4" como separacion*/
+.header-actions .icono-notificaciones span{
+    border-radius: 50px;
+    background-color: var(--rojo);
+    position: relative;
+    bottom: 15px;
+    right: 10px;
+    color: var(--fondo);
+    font-size: small;
+    padding: 1px 3px;
+}
+.user-button{
+    order: 1;
+}
+.nombre-usuario{
+    font-size: medium;
+}
+.header-actions .user-dropdown{
+    display: flex;
+    color: var(--colorPrimario);
+    font-weight: 520;
+}
+.user-button>i{
+    display: none;
+}
+.dropdown-contenido a {
+    margin-right: 10px;
+    /*Ocultar texto*/
+    content-visibility: hidden;
+    font-size: 0;
+    color: var(--fondo);
+}
+.dropdown-contenido a i{
+    font-size: large;
+}
+.sidebar-nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: fit-content;
+    background-color: var(--fondo);
+    grid-column: 1;
+    grid-row: span 2;
+    margin: 0;
+    padding: 5px 0;
+}
+.sidebar-nav h2{
+    color: var(--oscuro);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    padding-left: 40px;
+    margin-left: 20px;
+    height: 40px;
+}
+.sidebar-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-nav ul li{
+   border-radius: 0 15px 15px 0px;
+}
+.sidebar-nav ul a{
+       padding: 8px 0;
+   padding-left: 20px;
+    text-decoration: none;
+    display: block;
+    color: var(--oscuro);
+    font-weight:lighter;
+    font-size: 15px;
+}
+.sidebar-nav ul a i{
+    margin-right: 5px;
+    width: 20px;
+}
+.sidebar-nav a:hover{
+    background: linear-gradient(to right, #B993FF, #8B5CF6);
+    border-radius: 0 15px 15px 0px;
+    color: #fff;
+}
+main{
+    grid-column: 2;
+    padding: 20px;
+}
+.dashboard-grid{
+        display: grid;
+   grid-template-columns: repeat(6,1fr);
+   gap: 20px;
+}
+#estadisticas, #mensajes{
+    grid-column: span 6;
+}
+#estadisticas{
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#estadisticas .stat-card{
+    padding: 10px;
+} 
+.stat-card .stat-title, .stat-number{
+    font-weight: 550;
+}
+i{
+    margin-right: 5px;
+}
+.stat-number{
+    padding: 5px 0;
+    font-size: x-large;
+    color: var(--oscuro);
+    justify-self: center;
+}
+.stat-footnote{
+    margin-top: 5px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    width: fit-content;
+}
+.stat-footnote, .stat-footnote i{
+    background-color: var(--verdeClaro);
+    color: var(--verde);
+    font-size: small;
+}
+#mensajes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.messages-feed{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-column: span 3;
+    gap: 20px;
+}
+#mensajes footer a ,#tareas footer a{
+    display: block;
+    text-decoration: none;
+    font-size: small;
+}
+#mensajes header, #mensajes footer{
+    padding: 10px 0;
+    justify-items: center;
+    grid-column: span 3;
+    display: block;
+    color: var(--oscuro);
+}
+.message-row{
+    padding: 20px;
+    grid-column: 2;
+    display: block;
+    position: relative;
+}
+.msg-avatar i{
+    position: absolute; /*Relativo absoluto*/
+    top: 0;
+    right: 0;
+    margin: 15px;
+    color: #fff;
+    background-color: var(--azul);
+    padding: 5px;
+    border-radius: 5px;
+}
+.message-row:first-child{
+    grid-column: 1;
+    grid-row: span 2;
+}
+.message-row:last-child{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+#horario{
+    grid-column: span 2;
+    padding: 10px 20px;
+}
+#horario header,#tareas header{
+    justify-self: center;
+}
+#horario ul{
+    list-style: none;
+    padding: 0;
+}
+#horario ul li{
+    display: flex;
+    margin: 8px 0;
+    align-items: center;
+}
+#horario ul li i{
+    order: -1;
+    margin-right: 5px;
+    text-align: center;
+    width: 25px;
+    height: 15px;
+    color: var(--naranjaFuerte);
+    background-color: var(--naranja);
+    padding: 5px;
+    border-radius: 5px;
+
+}
+#tareas{
+    grid-column: span 4;
+    padding: 10px 20px;
+}
+#tareas table tr{
+    display: grid;
+    margin: 8px 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#tareas table tr td:first-child{
+    align-self: center;
+}
+#tareas table tr td:last-child{
+    align-self: center;
+    justify-self: end;
+    background-color: var(--verdeClaro);
+    color: var(--colorPrimario);
+    font-size: small;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+#tareas table i{
+    color: var(--rojo);
+}
+#tareas footer{
+    padding: 5px 0px;
+    justify-self: left;
+}
+/*Estilos de los bordes*/
+#estadisticas .stat-card, #mensajes header, #mensajes footer, .message-row, #horario,#tareas, form .form-card{
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--colorBorde);
+    background-color: var(--fondo);
+}
+.footer-dash{
+    grid-column: span 6;
+    justify-self: center;
+    margin: 20px 0;
+    font-size: small;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+form header i{
+    color: var(--colorPrimario);
+}
+form section{
+padding: 10px 20px;
+}
+form .form-body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+form .form-card:first-child{
+    grid-row: span 2;
+}
+form .form-card:first-child .campo{
+    grid-column: span 12;
+}
+.form-body>label{
+    font-size: small;
+    margin: 5px;
+}
+label span{
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+[for=foto]>span{
+    border: 1px solid var(--colorBorde);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+label span input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--colorBorde);
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: var(--textoSecundario);
+    background-color: var(--fondo);
+}
+label span i{
+    position: absolute;
+    top: 8px;
+    margin-right: 10px;
+    right: 0;
+}
+[for=fecha_nac] .input-icon{
+    display: none;
+}
+[for=foto] span .photo-preview{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+.form-body fieldset{
+    border: none;
+    margin-top: 5px;
+    padding: 0;
+    grid-column: span 12;
+}
+/*Tengo que ser muy especifico para que no se apliquen los otros diseños*/
+form .form-card:first-child fieldset[class=campo]{
+    padding: 5px 0;
+    grid-column: span 10;
+    font-size: small;
+}
+form .form-card:first-child label[for=pais]{
+    grid-column: span 2;
+}
+[for=pais] select{
+    padding: 5px 0;
+    margin-top: 10px;
+}
+.form-body fieldset div{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 10px;
+}
+.form-body fieldset label{
+    grid-column: span 4;
+    font-size: small;
+    border: 1px solid var(--colorBorde);
+    padding: 5px 0;
+    border-radius: 5px;
+}
+.form-body [for=biografia]{
+    grid-column: span 12;
+}
+.form-body [for=biografia] textarea{
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid var(--colorBorde);
+    color: var(--textoSecundario);
+    background-color: var(--fondo);
+    border-radius: 5px;
+    padding: 5px;
+}
+.form-body fieldset legend{
+    font-size: small;
+    margin-bottom: 5px;
+}
+.form-body fieldset [class=checkbox-group] label{
+    grid-column: span 3;
+}
+/*TO DO*/
+form section .form-body fieldset label:has(input:checked){
+    background-color: var(--primarioClaro);
+    color: var(--colorPrimario);
+    border: 1px solid var(--colorPrimario);
+/* } */
+
+/*Ultimo section*/
+form section:last-child .form-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+form section:last-child .form-body fieldset{
+    grid-column: auto;
+}
+form section:last-child .form-body fieldset:first-child div[class=radio-group]{
+    display: flex;
+    justify-content: space-between;
+}
+form section:last-child .form-body fieldset:last-child [class=checkbox-group] label{
+    grid-column: span 6;
+}
+form section:last-child .form-body fieldset label{
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+.form-actions{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.form-actions button{
+    padding: 5px;
+    border: 1px solid var(--colorBorde);
+    border-radius: 5px;
+    background-color: var(--fondo);
+    width: 100%;
+    font-size: 16px;
+}
+.form-actions button:hover{
+    background-color: var(--colorPrimario);
+    color: #fff;
+}
+.form-actions button:hover i{
+    color: #fff;
+}

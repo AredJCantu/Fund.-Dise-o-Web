@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            background-color: gray;
+        }
+        div div{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            font-size: 2.5em;
+            align-content: center;
+            text-align: center;
+            color: white;
+            float: left;/*Acomodar los elementos a la izquierda*/
+            box-sizing: border-box; /*Que ocupen 150px en total en vez del 150px + 2px + 2 px border*/
+        }
+        div div:first-child{
+            width: 300px;
+        }
+        div div:nth-child(2){
+            width: 100px;
+        }
+        div div:nth-child(3){
+            width: 200px;
+        }
+        /*El unico uso que tiene la flotacion es flotar imagenes en el texto*/
+        
+    </style>
+</head>
+<body>
+    <div>
+        <div id="1">1</div>
+        <div id="2">2</div>
+        <div id="3">3</div>
+        <div id="4">4</div>
+    </div>
+</body>
+</html>

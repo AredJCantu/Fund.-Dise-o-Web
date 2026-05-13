@@ -1,0 +1,86 @@
+/*Configuracion de fuente*/
+@font-face {
+    font-family: GoodDog;
+    src: url(GoodDog.TTF);
+}
+
+/*Estructura Elastica*/
+html body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FFC82F;
+}
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: #F1B30F;
+    border-bottom: 2px outset black;
+    padding: 0 150px;
+}
+header h1{
+    font-size: 5em;
+    margin: 10px 0;
+}
+header h1 a{
+    color: #564100;
+    text-decoration: none;
+    font-family: GoodDog;
+    font-weight: normal;
+    background-image: url(imgs/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 100px;
+}
+main{
+    background-color: white;
+    margin: 40px 150px;
+    border-radius: 10px;
+    padding: 20px;
+}
+section.titulo{
+    border-bottom: 1px solid #247EB0;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.titulo h2{
+    margin: 0;
+    color: #247EB0;
+}
+section.titulo input{
+    width: 300px;
+    background-image: url(imgs/search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 3px 3px 3px 25px;
+    border: 1px inset lightgray;
+}
+section.list{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+}
+section.list a{
+    text-decoration: none;
+    color: #247EB0;
+    text-align: center;
+}
+section.list img{
+    width: calc(100% - 12px);
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+footer{
+    background-color: #F1B30F;
+    border-top: 2px solid black;
+    padding: 20px 150px;
+    text-align: center;
+    color: #564100;   
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1>HTML y Unicode</h1>
+    <p>Para utilizar un caracter particular de un idioma utiliza el codigo UNICODE correspondiente precedido de "&amp;#" y seguido de ; (punto y coma), por ejemplo, el codigo 21512, produce esto: &#21512;</p>
+    <h2>Ejemplos:</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Caracter</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&amp;#937;</code></td>
+                <td>&#937;</td>
+                <td>Letra griega Omega</td>
+            </tr>
+            <tr>
+                <td><code>&amp;#12354;</code></td>
+                <td>&#12354;</td>
+                <td>Letra A hiragana (japones)</td>
+            </tr>
+            <tr>
+                <td><code>&amp;#33865;</code></td>
+                <td>&#33865;</td>
+                <td>Idiograma "Hoja" en chino tradicional</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Pero tambien puede mostrar simbolos matematicos</h2>
+    <ul>
+        <li>8734=&#8734; (Infinito)</li>
+        <li>8721=&#8721; (Sumatoria)</li>
+        <li>188=&#188; (Fracción)</li>
+    </ul>
+    <h2>Y hasta piezas de ajedrez</h2>
+    <dl>
+        <dt>Piezas blancas:</dt>
+        <dd>9812 = &#9812; 9813 = &#9813; 9814 = &#9814; 9815 = &#9815; 9816 = &#9816; 9817 = &#9817;</dd>
+        <dt>Piezas negras:</dt>
+        <dd>9818 = &#9818; 9819 = &#9819; 9820 = &#9820; 9821 = &#9821; 9822 = &#9822; 9823 = &#9823;</dd>
+    </dl>
+</body>
+</html>

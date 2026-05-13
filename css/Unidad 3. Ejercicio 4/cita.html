@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programar Cita — Salford & Co.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="top-bar">
+    <nav>
+      <a href="#">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        <span>SALFORD &amp; CO.</span>
+      </a>
+      <ul>
+        <li><a href="cita.html" class="active">Programar cita</a></li>
+        <li><a href="consulta.html">Consulta</a></li>
+        <li><a href="expediente.html">Expediente</a></li>
+        <li><a href="admision.html">Admisión</a></li>
+      </ul>
+    </nav>
+
+    <div class="doctor-info">
+      <strong>Dr. Daniel Gallego</strong>
+      <span>Medicina General</span>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="form-header">
+      <h1>Programación de cita</h1>
+      <p>Salford &amp; Co. — <span>REF-CITA-2024</span></p>
+    </div>
+
+    <form method="post">
+
+      <fieldset>
+        <legend>Ficha de identificación del paciente</legend>
+
+        <label for="nombre">Nombre completo del paciente
+          <input type="text" id="nombre" name="nombre" placeholder="Apellidos, Nombres" />
+        </label>
+
+        <label for="expediente">Número de expediente
+          <input type="text" id="expediente" name="expediente" placeholder="HC-00000" />
+        </label>
+
+        <label for="nacimiento">Fecha de nacimiento
+          <input type="date" id="nacimiento" name="nacimiento" />
+        </label>
+
+        <label for="curp">CURP / ID Oficial
+          <input type="text" id="curp" name="curp" placeholder="Documento de identidad" />
+        </label>
+
+        <fieldset class="radio-group">
+          <legend>Sexo</legend>
+          <label><input type="radio" name="sexo" value="masculino" /> Masculino</label>
+          <label><input type="radio" name="sexo" value="femenino" /> Femenino</label>
+          <label><input type="radio" name="sexo" value="otro" /> Otro</label>
+        </fieldset>
+
+        <fieldset class="radio-group">
+          <legend>Género</legend>
+          <label><input type="radio" name="genero" value="hombre" /> Hombre</label>
+          <label><input type="radio" name="genero" value="mujer" /> Mujer</label>
+          <label><input type="radio" name="genero" value="otro" /> Otro</label>
+        </fieldset>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Logística de atención</legend>
+
+        <label for="medico">Médico / Especialidad destino
+          <select id="medico" name="medico">
+            <option>Dr. Daniel Gallego (Medicina General)</option>
+            <option>Dra. Elena Ramos (Cardiología)</option>
+            <option>Dr. Jorge Ruiz (Traumatología)</option>
+          </select>
+        </label>
+
+        <label for="fecha-cita">Fecha de cita
+          <input type="date" id="fecha-cita" name="fecha-cita" />
+        </label>
+
+        <label for="hora-cita">Hora de inicio
+          <input type="time" id="hora-cita" name="hora-cita" />
+        </label>
+
+        <label for="notas">Notas para el consultorio
+          <textarea rows="5" id="notas" name="notas" placeholder="Ej: Paciente de primera vez, requiere revisión de laboratorios..."></textarea>
+        </label>
+
+      </fieldset>
+
+      <div class="form-actions">
+        <span>Acceso restringido a personal médico autorizado</span>
+        <button type="reset" class="btn--ghost">Limpiar</button>
+        <button type="submit" class="btn--primary">Finalizar cita</button>
+      </div>
+
+    </form>
+  </main>
+
+</body>
+</html>

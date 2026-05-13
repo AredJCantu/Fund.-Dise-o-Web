@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Tablas</h1>
+    <table>
+        <!--Tr es Renglon-->
+        <tr>
+            <!--Td es las celdas-->
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+        </tr>
+    </table>
+    <h1>Expansion de celdas</h1>
+    <table>
+        <!--Tr es Renglon-->
+        <tr>
+            <!--Td es las celdas-->
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td colspan="2">Celda 1</td>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+            <td>Celda 1</td>
+        </tr>
+    </table>
+    <h1>Encabezados de celda</h1>
+    <table>
+        <caption>Tabla titulo</caption>
+        <tr>
+            <td>No Control</td>
+            <td>Nombre</td>
+        </tr>
+        <tr>
+            <td>12345</td>
+            <td>Jared</td>
+        </tr>
+        <tr>
+            <td>12345</td>
+            <td>Jared2</td>
+        </tr>
+    </table>
+    <h2>agrupamientos de columnas</h2>
+    <table border="1">
+        <colgroup>
+            <col style="background:Red" />
+            <col style="width:500px" />
+            <col />
+        </colgroup>
+        <thead>
+            <tr>
+                <td>Codigo</td>
+                <td>Producto</td>
+                <td>Precio</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>123</td>
+                <td>Salsa</td>
+                <td>$52.43</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>Pizza</td>
+                <td>$122.93</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>Horchata</td>
+                <td>$502.12</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

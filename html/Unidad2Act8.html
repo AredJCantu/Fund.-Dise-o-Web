@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 8</title>
+</head>
+<body>
+    <h1>Solicitud de Empleo</h1>
+    <form>
+        <fieldset>
+            <legend>Fotografia</legend>
+            <img alt="Foto de perfil" src="https://tse3.mm.bing.net/th/id/OIP.3QNVn-m9xSLuH87_WOM6sQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" width="100"><br>
+            <input type="file" id="file1">
+        </fieldset>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="txtPaterno">Apellido Paterno:</label><input type="text" id="txtPaterno">
+            <label for="txtMaterno">Apellido Materno:</label><input type="text" id="txtMaterno"><br>
+            <label for="txtNombre">Nombre(s):</label><input type="text" id="txtNombre"><br>
+            <label for="Date1">Fecha de Nacimiento:</label><input type="date" id="Date1">
+            <label for="Edad1">Edad</label><input type="number" id="Edad1" max="120">
+            Sexo:
+            <input type="radio" name="Escojer" id="Sexo1">
+            <label for="Sexo1">Masculino</label>
+            <input type="radio" name="Escojer" id="Sexo2">
+            <label for="Sexo2">Femenino</label><br>
+            <label for="Direccion1">Dirección</label><input id="Direccion1" type="text" placeholder="Calle, Numero y Colonia"><br>
+            <label for="Estado1">Estado:</label><select id="Estado1"><option selected>Aguascalientes</option><option>Coahuila</option> </select>
+            <label for="Municipio1">Municipio:</label>
+            <select id="Municipio1"> 
+                <option selected disabled>-- Seleccione --</option>
+                <option>Saltillo</option>
+            </select><br>
+            <label for="Telefono1">Teléfono:</label><input id="Telefono1" placeholder="Con clave LADA" type="number">
+            <label for="Correo1">Correo electrónico:</label><input type="email" id="Correo1">
+        </fieldset>
+        <fieldset>
+            <legend>Datos del Puesto</legend>
+            <label for="F1">Fecha:</label>
+            <select id="F1">
+                <option selected>1</option>
+                <option>2</option>
+            </select>
+            <label for="F2">de</label>
+            <select id="F2">
+                <option selected>Enero</option>
+                <option>Febrero</option>
+            </select>
+            <label for="F3">de</label>
+            <select id="F3">
+                <option selected>2000</option>
+                <option>2001</option>
+            </select><br>
+            <label for="Puesto1">Puesto que solicita:</label><input type="text" id="Puesto1"><br>
+            <label for="Sueldo1">Sueldo deseado: $</label><input type="number" id="Sueldo1" value="0.00"><br>
+            <label for="Razones1">Escribir las razones por las causes considera que usted es la persona adecuada para el puesto:</label><br>
+            <textarea rows="3" cols="80" placeholder="De manera clara y concisa" id="Razones1"></textarea>
+        </fieldset>
+        <input type="checkbox" id="chk1"><label for="chk1">Confirmo que los datos son reales</label><br>
+        <input type="submit" value="Enviar Solicitud">
+        <input type="reset" value="Cancelar">
+    </form>
+</body>
+</html>

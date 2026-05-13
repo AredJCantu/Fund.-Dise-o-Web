@@ -1,0 +1,290 @@
+/*La clase root permite definir cosas que se utilizan en todo el documento*/
+:root{
+    /*Las variables se definen con -- y es sensible a mayusculas*/
+    --fondo:#F5F1F9;
+    --borde:#e2e8f0;
+    --colorPrimario:#312E81;
+    --colorOscuro:#1e1b4b;
+    --border: 5px;
+    --suave: #eef2ff;
+    --placeholder: #cbd5e1;
+    --radius: 8px;
+    --TEXTOSECUNDARIO: #94a3b8;
+    --Radio:8px;
+}
+
+
+html , body{
+    /*diseño liquido ocupa el 100% de la ventana y nunca cambia, no se debe activar el scrollbar vertical, todas las ventanas tienen el mismo tamaño verticalmente*/
+    /*es diseño elastico es el que cambia verticalmente, no todas las ventanas tienen el mismo tamaño*/
+    /*el diseño estatico es cuando tiene un tamaño fijo y lo sobrante lo deja como sobrante, no lo rellena*/
+    /*diseño elastico*/
+    padding: 0;
+    margin: 0;
+    background-color: var(--fondo);
+    font-family: system-ui;/*utiliza la fuente del so*/
+}
+header.top-bar{
+    background-color: #ffffff;
+    /*outset significa que sobresale el borde*/
+    border-bottom: 1px outset var(--borde);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+header.top-bar nav{
+    display: flex;
+}
+header.top-bar nav > a{
+    display: flex;
+    /*items son las etiquetas, content es el texto*/
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--colorPrimario);
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
+header.top-bar nav > a svg{
+    background-color: var(--colorPrimario);
+    color: #ffffff;
+    border-radius: var(--Radio);
+    padding: 5px;
+}
+header nav ul
+{
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 4px;
+    background-color: var(--suave);
+    border-style: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+header nav ul a
+{
+    text-decoration: none;
+    color: var(--TEXTOSECUNDARIO);
+    border-radius: var(--border);
+    font-weight: bold;
+    padding: 15px 25px;
+    display: block;
+}
+header nav ul a.active
+{
+    background-color: var(--colorPrimario);
+    color: white;
+}
+header div
+{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  border-left: 2px inset var(--borde);
+  justify-content: center;
+  color: var(--colorPrimario);
+}
+header div span{
+    color: var(--TEXTOSECUNDARIO);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+main{
+    padding: 20px 15%;
+}
+main .form-header{
+    display: flex;
+    justify-content: space-between;
+}
+main .form-header>h1{
+    color: var(--colorOscuro);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+main .form-header>p{
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: var(--TEXTOSECUNDARIO);
+    flex-direction: column;
+    justify-content: center;
+}
+main .form-header p span{
+    color: var(--colorPrimario);
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+main form{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+        gap: 20px;
+}
+main form > fieldset{
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    padding: 20px;
+    border: 1px  var(--borde);
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: var(--borde) 10px 5px 15px;
+}
+main form > fieldset> legend{
+    background-color: var(--colorPrshaimario);
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: var(--Radio);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: small;
+}
+label,.radio-group{
+
+    color: var(--TEXTOSECUNDARIO);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+    gap: 5px;
+}
+input,select,textarea{
+    background-color: var(--suave);
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    resize: none;
+}
+input::placeholder{
+    color: var(--TEXTOSECUNDARIO);
+}
+label[for=nombre],label[for=observaciones],label[for=contacto]{
+    grid-column: span 8;
+}
+label[for=expediente],label[for=gravedad],label[for=parentesco]{
+    grid-column: span 4;
+}
+label[for=gravedad] > span{
+    font-size: 0.8em;
+}
+label[for=nacimiento],label[for=curp],.radio-group,label[for=telefono]{
+    grid-column:  span 6;
+}
+.radio-group{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+.radio-group label{
+    border: 1px solid var(--borde);
+    border-radius: 25px;
+    font-weight: normal;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: normal;
+    font-size: 1em;
+    flex-basis: 100%;
+    align-items: center;
+    color: black;
+    flex-direction: row;
+    text-transform: capitalize;
+    
+}
+label[for=notas],label[for=motivo],fieldset>p,.checkbox-label{
+    grid-column: span 12;
+}
+label[for=medico]{
+    grid-column: span 6;
+}
+label[for=hora-cita],label[for=fecha-cita],label[for=presion],label[for=temperatura],label[for=frecuencia],label[for=saturacion]{
+    grid-column: span 3;
+}
+fieldset>p{
+    display: flex;
+    background-color: var(--fondo);
+    border-radius: 10px;
+    border: 1px solid var(--borde);
+    align-items: center;
+    margin: 10px;
+    padding: 10px 15px;
+    color: var(--colorPrimario);
+    font-weight: 600;
+    font-size: medium;
+}
+fieldset>p>span{
+    margin: 5px;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 0%;
+    color: var(--colorOscuro);
+    font-size: small;
+    letter-spacing: 1px;
+}
+fieldset>p>label{
+        flex-grow: 0; /*Cuanto puede crecer*/
+    flex-shrink: 1; /*Cuanto puede disminuir*/
+    flex-basis: 0%;/*El valor base (0% es auto)*/
+    font-size: small;
+    text-transform: none;
+    padding: 5px 10px;
+    margin: 2px;
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    flex-direction: row;
+    color: var(--colorPrimario);
+    font-weight: 500;
+    letter-spacing: normal;
+}
+fieldset>p>input{
+        flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0%;
+}
+.checkbox-item{
+    grid-column: span 3;
+    flex-direction: row;
+    border: 1px solid var(--borde);
+    gap: 5px;
+    letter-spacing: normal;
+    text-transform: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    color: var(--colorPrimario);
+    align-items: center;
+}
+
+.checkbox-item:has(input:checked),.checkbox-label:has(input:checked){
+    border: 1px solid var(--colorPrimario);
+    background-color: var(--suave);
+}
+.checkbox-label{
+    flex-direction: row;
+    color: var(--colorPrimario);
+    padding: 10px 15px;
+    margin: 5px;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-transform: none;
+
+}
+.form-actions{
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+.form-actions span, .form-actions [type=reset]{
+    color: var(--TEXTOSECUNDARIO);
+}

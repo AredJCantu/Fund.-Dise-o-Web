@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+ 
+<head>
+  <title></title>
+</head>
+ 
+<body>
+ 
+  <p>Esto es un parrafo</p>
+  <hr>
+  <h1 id="Titulo">Titulo</h1>
+  <p><a href="#Final">Ir al final</a></p>
+  <hr>
+  <p><abbr title="Instituto Tecnológico de Estudios Superiores de la region carbonifera">ITESRC</abbr></p>
+  <hr>
+  <p><q>Yo solo se que no se nada</q> Socrates.</p>
+  <hr>
+  <mark>Texto resaltado</mark>
+  <hr>
+  <p>el juego va a ser el <del>viernes</del> sabado</p>
+  <hr>
+  <p>el juego va a ser el <ins>viernes</ins></p>
+  <hr>
+  <p>el juego va a ser el viernes <em>Lleguen temprano</em></p>
+  <hr>
+  <p>el juego va a ser el viernes <em>Lleguen temprano</em> o <strong>Seran explulsados</strong></strong></p>
+  <hr>
+  <cite>Github copilot es una herramienta</cite>
+  <hr>
+  <blockquote>Github copilot es una herramienta de inteligencia artificial que ayuda a los programadores a escribir
+    código más rápido y con menos errores.</blockquote>
+  <hr>
+  <pre>esto es un parrafo de texto
+        y esta es la segunda
+        y esta es la                tercera
+        letra mono espaciada
+      </pre>
+  <hr>
+  <code>
+        private void saludar(){
+          System.out.println("Hola mundo");
+        }
+      </code>
+  <hr>
+  <p>direccion:
+  <address>calle 13</address>
+  </p>
+  <hr>
+  <p>Hora del juego <time datetime="2026-02-12T03"></time></p>
+  <p>telefono: <tel>555-1234</tel>
+  </p>
+  <hr>
+  <p>Presiona <kbd>Ctrl + C</kbd> para salir</p>
+  <hr>
+  <p>El juego va a ser el viernes <small>lleguen temprano</small></p>
+  <hr>
+  <p>Super indic<sup>e</sup> y subindic<sub>e</sub></p>
+  <hr>
+  <p>Descargando:
+    <progress></progress>
+  </p>
+  <hr>
+  <p>
+    <meter high="15" low="30" value="8" max="30"></meter>
+  </p>
+  <hr>
+  <h1>ETIQUETAS DE LISTAS</h1>
+  <ol>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+  </ol>
+  <hr>
+  <ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+  </ul>
+  <hr>
+  <!-- glosario o diccionario -->
+  <dl>
+    <dt>Taco</dt>
+    <dd>Un platillo mexicano</dd>
+    <dt>Pizza</dt>
+    <dd>Un platillo italiano</dd>
+  </dl>
+ 
+  <h1>
+    Listas anidadas
+  </h1>
+  <ol>
+    <li>Datos generales:</li>
+    <dl>
+      <dt>jared oaxaco:</dt>
+      <dd>67</dd>
+      <dt>Nigger:</dt>
+    </dl>
+    <li>
+      <p>Es un estudiante</p>
+    </li>
+  </ol>
+  <hr>
+  <h1>Etiquetas de navegación</h1>
+  <a href="https://goolge.com">ir a google</a><br>
+  <a target="_blank" href="https://goolge.com">ir a google en otra pestaña</a> <br>
+  <a target="otro" href="https://goolge.com">ir a google en una pestaña especifica</a><br>
+  <hr>
+  <h2>Navegar a otros documento:</h2>
+  <p>Ver el reglamento: <a href="index.apk">ir</a></p>
+  <p>Descargar <a href="index.apk" download="Tacos"></a></p>
+  <h2>Navegar dentro del mismo documento</h2>
+  <p id="Final"><a href="#Titulo">Ir al titulo</a></p>
+  <hr>
+  <h1>Etiquetas de tablas</h1>
+  <p>Acomodan los datos de forma tabular dentro del documento</p>
+  <table border="1">
+    <tr>
+      <td>celda 1</td>
+      <td>celda 2</td>
+      <td>celda 3</td>
+    </tr>
+    <tr>
+      <td>celda 1</td>
+      <td>celda 2</td>
+    </tr>
+    <tr>
+      <td>celda 3</td>
+    </tr>
+  </table>
+ 
+  <table border="1">
+    <tr>
+      <td>Celda1</td>
+      <td>Celda2</td>
+      <td>Celda3</td>
+    </tr>
+    <tr>
+      <td colspan="3">Celda gorda</td>
+    </tr>
+    <tr>
+      <td>Celda5</td>
+      <td rowspan="2" colspan="2">Celda7</td>
+    </tr>
+    <tr>
+      <td>Celda6</td>
+    </tr>
+  </table>
+ 
+  <h1>THead</h1>
+ 
+  <table border="1">
+    <caption>titulo con caption</caption>
+    <thead>
+      <tr>
+        <th>Taco</th>
+        <th>Taco</th>
+      </tr>
+    </thead>
+    <tbody>
+ 
+      <tr>
+        <td colspan="3">Celda gorda</td>
+      </tr>
+      <tr>
+        <td>Celda5</td>
+        <td rowspan="2" colspan="2">Celda7</td>
+      </tr>
+      <tr>
+        <td>Celda6</td>
+      </tr>
+    </tbody>
+    <tfoot>
+ 
+    </tfoot>
+  </table>
+ 
+ 
+  <table border="1">
+    <caption>titulo </caption>
+    <colgroup>
+      <col></col>
+      <col></col>
+      <col></col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>producto</th>
+        <th>Codigo</th>
+        <th>precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1 taco</td>
+        <td>0001</td>
+        <td>$10</td>
+      </tr>
+      <tr>
+        <td>enchiladas</td>
+        <td>0002</td>
+        <td>$50</td>
+      </tr>
+            <tr>
+        <td>1 taco</td>
+        <td>0001</td>
+        <td>$10</td>
+      </tr>
+    </tbody>
+    <tfoot>
+ 
+    </tfoot>
+  </table>
+
+
+  <!--Imagenes-->
+  <img src="img1.jpg" alt="Logotipo 1" width="100px" />
+  <!--Agrupar imagenes-->
+  <figure></figure>
+  <!--Titulo del grupo de imagenes-->
+  <figcaption></figcaption>
+
+  <figure>
+      <img src="img1.jpg" alt="Logotipo 1" width="100px" />
+      <figcaption>Titulo 1</figcaption>
+        <img src="img1.jpg" alt="Logotipo 1" width="100px" />
+          <img src="img1.jpg" alt="Logotipo 1" width="100px" />
+          <figcaption>Titulo de las imagenes</figcaption>
+  </figure>
+
+  <!--Multimedia-->
+  <h1>Multimedia</h1>
+  <audio src="audio1.mp3" controls autoplay loop></audio><!--inline-->
+  <video src="Video1.mp4" controls autoplay loop></video><!--inline-->
+  <svg>
+  </svg><!--inline-->
+  <!--Formularios-->
+  <h1>Formularios</h1>
+  <form id="Form1">
+    <input type="text">
+    <input type="number" min="0" max="100" step=".5">
+    <input type="range" min="0" max="100"> <!--Regresa un numero-->
+    <input type="color"> <!--regresa un string de un hexadecimal-->
+    <input type="password">
+    <input type="button" value="press me">
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Erase all">
+    <input type="image" src="img1.jpg"><!--Convierte una img en boton-->
+    <h1>Casillas de verificar</h1>
+    <input type="checkbox" id="chk1"><label for="chk1">Click me</label><!--el label debe ir asociado a un control, necesita el atributo for-->
+    <h1>Casillas de busqueda</h1>
+    <input type="search" form="Form1"> 
+    <input type="radio" name="grupo1" id="rdb1"> <label for="rdb1">Select me 1</label>
+    <input type="radio" name="grupo1" id="rdb2"> <label for="rdb2">Select me 2</label>
+      <h2>Campos fecha</h2>
+    <input type="date" value="2012-04-04">
+    <input type="datetime" value="2012-04-04">
+    <input type="datetime-local" value="2012-03-04T14:22:03">
+    <input type="month" value="2020-04-12"> <!--Siempre regresa el primero del mes-->
+    <input type="week">
+    <h2>Campos especiales</h2>
+    <input type="tel">
+    <input type="email">
+    <input type="url">
+    <input type="search">
+    <input type="file">
+    <input type="hidden">
+    <h2>Area de texto multilinea</h2>
+    <textarea rows="20"></textarea>
+    <h2>Cambos de seleccion</h2>
+    <select> <!--Dropdown list(No deja escribir, solo seleccionar)-->
+      <option>Azul</option>
+      <option>Verde</option>
+    </select>
+    <select size="5"> <!--Listbox-->
+      <option selected disabled>--Agarre uno--</option>
+      <option value="1">Verde</option>
+      <option value="2">Rojo</option>
+      <option value="3">Amarillo</option>
+    </select>
+    <select>
+      <optgroup label="Colores">
+      <option>
+      <option value="1">Verde</option>
+      <option value="2">Rojo</option>
+      <option value="3">Amarillo</option>
+        </option>
+        <option label="Verduras">
+          <option>Si</option>
+          <option>No</option> 
+        </option>
+      </optgroup>
+    </select>
+    <input list="listacarreras" type="text">
+    <datalist id="listacarreras">
+      <option>Carrera 1</option>
+      <option>Carrera 2</option>
+      <option>Carrera 3</option>
+      <option>Carrera 4</option>
+    </datalist>
+    <h2>Comandos(Buttons)</h2>
+    <button type="button">Boton</button>
+  </form>
+  <h2>Agrupar Campos</h2>
+  <fieldset> <!--Agrupa campos-->
+    <legend>Datos:</legend>
+    <label for="Holatxt">Hola</label>
+    <input type="text" id="Holatxt"><br>
+    <label for="Hola2txt">Hola2</label>
+    <input type="text" id="Hola2txt">
+  </fieldset>
+  <fieldset> <!--Agrupa campos-->
+    <legend>Suma:</legend>
+    <label for="n1">Numero 1</label>
+    <input type="number" value="4" id="n1"><br>
+    <label for="n2">Numero 2</label>
+    <input type="text" id="n2" value="5"><br>
+    <input type="button" value="Calcular"><br>
+    <label for="S1">Salida:</label>
+    <output id="S1">8</output>
+  </fieldset>
+   <h2>Marcos</h2>
+   <!--Incrustar documentos en la pag web-->
+   <iframe src="https://www.itesrc.edu.mx"></iframe>
+
+<h2>Etiquetas semanticas</h2>
+<header></header>
+<footer></footer>
+<div></div>
+<main></main>
+<summary></summary>
+<details></details>
+<section></section>
+
+
+</body>
+</html>

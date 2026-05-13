@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+<body>
+    <h1>Carácteres especiales en HTML</h1>
+    <p>Si necesitamos incluir en nuestros textos signos que tiene un significado especial en HTML (por ej. "&lt;" - menor que) debemos usar su nombre en código</p>
+    <p>Por ejemplo para mostrar el signo "&lt;" debemos escribir <strong>&amp;lt;</strong> en nuestra página.</p>
+    <h2>Ejemplo de caracteres especiales</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Resultado</th>
+                <th>Descripcion</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Espacio en blanco <br> <em>Non-breaking space</em></td>
+                <td>&amp;nbsp;</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>Menor que <br> <em>lesser than</em></td>
+                <td>&amp;lt;</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>Mayor que <br> <em>greater than</em></td>
+                <td>&amp;gt;</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td></td>
+                <td>&amp;amp;</td>
+            </tr>
+            <tr>
+                <td>&copy;</td>
+                <td>Derechos de autor <br> <em>Copyright</em></td>
+                <td>&amp;copy;</td>
+            </tr>
+            <tr>
+                <td>&aacute;</td>
+                <td>a minúscula con acento</td>
+                <td>&amp;aacute;</td>
+            </tr>
+            <tr>
+                <td>&Ntilde;</td>
+                <td>&Ntilde; mayuscula</td>
+                <td>&amp;Ntilde;</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>De esa forma si se considera el siguiente texto:</p>
+    <pre>Los caracteres &lt;, &gt;, " y &amp; pueden dar problemas con los textos en HTML</pre>
+    <p>Para mostrar correctamente el texto anterior en una página HTML, se debe sustituir cada carácter especial por su entidad HTML:</p>
+    <p><code>&lt;p&gt;Los caracteres &amp;lt;, &amp;gt;, &amp;quot; y &amp;amp; pueden dar problemas con los textos en HTML&lt;/p&gt;</code></p>
+</body>
+</html>
