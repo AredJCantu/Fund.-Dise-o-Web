@@ -1,0 +1,164 @@
+:root{
+    --colorPrimario:#2C3E50;
+    --suavePrimario:#42586E;
+    --colorComplementario1:#E67E22;
+    --suaveComplementario1:#F49C4D;
+    --colorComplementario2:#ECF0F1;
+    --colorOscuro:#2F2F2F;
+    --colorGris:#9F9F9F;
+    --fuente:'Arial';
+}
+.info-main .carrucel{
+    background-image: url(../src/img1.jpeg);
+    background-size: cover;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 10px #000000;
+}
+.info-main .carrucel h1{
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.info-main .info-general, .info-main .perfiles{
+    margin: 30px 5%;
+}
+.info-main .info-general h2{
+    color: var(--colorPrimario);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.info-main .info-general p{
+    padding-bottom: 20px;
+    font-size: small;
+    color: var(--suavePrimario);
+    letter-spacing: 1px;
+    border-bottom: 1px solid black;
+}
+.info-main .perfiles{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 20px;
+}
+.info-main .perfiles .ingreso, .info-main .perfiles .egreso{
+    border: 1px unset black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 5px black;
+}
+.info-main .perfiles h2{
+    color: var(--colorPrimario);
+    font-weight: bold;
+    font-size: 2em;
+}
+.info-main .perfiles div ul{
+    list-style: lower-roman;
+    margin: 0;
+    padding: 0;
+    padding-left: 5%;
+}
+.info-main .perfiles div ul li{
+    margin: 5px 0;
+    text-wrap-mode: wrap;
+    letter-spacing: 1px;
+    font-size: small;
+    font-weight: 500;
+}
+
+/*Noticias css*/
+.noti-main{
+    margin: 20px 5%;
+}
+.noti-main section{
+    margin-bottom: 10px;
+}
+.noti-main section header h1{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.noti-main section .cuerpo{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 60px;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+.noti-main section .cuerpo .card{
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: span 4;
+    box-shadow: 0 0 10px var(--colorGris);
+    border-radius: 5px;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.noti-main section  .card h2{
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+.noti-main section  .card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+.noti-main section  .card p{
+    opacity: 0;
+    display: none;
+}
+.noti-main section .card:hover{
+    transform: scale(1.1);
+}
+.noti-main section .card:focus{
+    z-index: 10;
+    outline: transparent;
+    animation: animacionesNoticias 2s forwards;
+    flex-direction: column;
+}
+.noti-main section .card:focus p{
+    display: block;
+    animation: mostrarTextoNoticias 2s forwards;
+}
+@keyframes mostrarTextoNoticias {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        display: block;
+        opacity: 1;
+        font-size: small;
+    }
+}
+@keyframes animacionesNoticias {
+    0%{
+        position: fixed;
+    }
+    100%{
+        position: fixed;
+        transform: translate(-50%, -50%) scale(1.5);
+        top: 50%;
+        left: 50%;
+        outline: 10000px solid #00000099;
+    }
+}
+/*Campo laboral*/
+.oportunidad .hero{
+    
+}

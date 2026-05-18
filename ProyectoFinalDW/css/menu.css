@@ -4,34 +4,41 @@
     --colorComplementario1:#E67E22;
     --suaveComplementario1:#F49C4D;
     --colorComplementario2:#ECF0F1;
+    --colorOscuro:#2F2F2F;
+    --colorGris:#9F9F9F;
     --fuente:'Arial';
 }
 html, body{
     padding: 0;
     margin: 0;
     background-color: var(--colorComplementario2);
+    font-family: var(--fuente);
+}
+header{
+    position: sticky;
 }
 header nav{
-    position: sticky;
     display: flex;
     justify-content: space-between;
     background-color: var(--colorPrimario);
 }
 header nav img{
+    color: #fff;
     width: 70px;
     margin: 10px 20px;
 }
 header nav ul{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
     padding: 0;
     margin: 0px 20px;
 }
 header nav ul a{
     display: flex;
+    padding: 5px;
     align-items: center;
-    height: 100%;
+    height: calc(100% - 10px);
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -39,7 +46,35 @@ header nav ul a{
     font-weight: normal;
     letter-spacing: 1px;
 }
-header nav ul a:hover, header nav ul a:active{
+header nav ul a:hover{
+    background-color: var(--suavePrimario);
+}
+header nav ul a.activo{
     background-color: var(--suavePrimario);
     font-weight: bold;
+}
+footer{
+    display: flex;
+    background-color: var(--colorOscuro);
+    padding: 20px 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p{
+    color: var(--colorGris);
+    font-size: small;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+footer .social a{
+    margin: 0 10px;
+    background-color: #454545; 
+    color: var(--colorGris);
+    text-decoration: none; 
+    padding: 10px;
+    border-radius: 50%;
+}
+.footer .social a:hover{
+    background-color: var(--colorGris);
+    color: #454545;
 }
