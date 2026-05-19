@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServQuick POS</title>
+    <link href="estilos2.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <label for="chk_sidebar" class="menu-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </label>
+            <div class="logo">
+                <span>⏱️</span>
+                <span>ServQuick POS</span>
+            </div>
+        </div>
+        
+        <div class="user-menu">
+            <div class="user-label">
+                <div class="avatar">V</div>
+                <span style="font-size: 0.75rem; font-weight: 600;">Victor</span>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="dropdown">
+                <div class="session-info">
+                    <p>SESIÓN ACTIVA</p>
+                    <p>Victor Administrador</p>
+                </div>
+                <button class="logout-btn">🚪 Cerrar sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <input type="checkbox" id="chk_sidebar">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#"><span>🏠</span><span class="sidebar-text">Inicio</span></a></li>
+                    <li class="active"><a href="#"><span>🍰</span><span class="sidebar-text">Menú Pasteles</span></a></li>
+                    <li><a href="#"><span>🛒</span><span class="sidebar-text">Ventas Rápidas</span></a></li>
+                    <li><a href="#"><span>🛍️</span><span class="sidebar-text">Pedidos</span></a></li>
+                    <li><a href="#"><span>📊</span><span class="sidebar-text">Reportes</span></a></li>
+                    <li><a href="#"><span>📋</span><span class="sidebar-text">Inventario</span></a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#"><span>⚙️</span><span class="sidebar-text">Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <main>
+                <div class="section-header">
+                    <div>
+                        <h1>Menú de Repostería</h1>
+                        <p>Selecciona los productos para agregarlos al pedido actual</p>
+                    </div>
+                    <span class="product-count">Total: 15 productos</span>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <section class="carousel-page">
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?w=400&h=300&fit=crop" alt="Pastel de Piña">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Pastel de Piña</h3>
+                                    <div class="price">$ 60.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop" alt="Pastel Mawa">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Pastel Mawa</h3>
+                                    <div class="price">$ 80.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop" alt="Selva Negra">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Pastel Selva Negra</h3>
+                                    <div class="price">$ 75.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=400&h=300&fit=crop" alt="Polvorón">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Polvorón de Nuez</h3>
+                                    <div class="price">$ 15.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop" alt="Pudín">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Pudín Selva Blanca</h3>
+                                    <div class="price">$ 55.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Chocolate">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Pastel de Chocolate</h3>
+                                    <div class="price">$ 80.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1601154564839-2f4d77afec58?w=400&h=300&fit=crop" alt="Galletas de Mantequilla">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Galletas de Mantequilla</h3>
+                                    <div class="price">$ 20.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1589301773859-bb024d3ad558?w=400&h=300&fit=crop" alt="Samosa">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Samosa</h3>
+                                    <div class="price">$ 30.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=400&h=300&fit=crop" alt="Kachori">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Kachori</h3>
+                                    <div class="price">$ 25.00</div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section class="carousel-page">
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=300&fit=crop" alt="Red Velvet">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Rebanada Red Velvet</h3>
+                                    <div class="price">$ 90.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=300&fit=crop" alt="Dona">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Dona de Chocolate</h3>
+                                    <div class="price">$ 40.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=400&h=300&fit=crop" alt="Muffin">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Muffin de Vainilla</h3>
+                                    <div class="price">$ 45.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop" alt="Galleta Chispas">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Galleta con Chispas</h3>
+                                    <div class="price">$ 25.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop" alt="Tarta Fresa">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Tarta de Fresa</h3>
+                                    <div class="price">$ 70.00</div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <figure>
+                                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop" alt="Cruasán">
+                                </figure>
+                                <div class="product-info">
+                                    <h3>Cruasán</h3>
+                                    <div class="price">$ 50.00</div>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+            <aside>
+                <div class="cart-header">
+                    <h2><span>🛒</span><span>Pedido Actual</span></h2>
+                    <button>Vaciar todo</button>
+                </div>
+
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=80&h=80&fit=crop" alt="">
+                            <div>
+                                <h4>Pastel Selva Negra</h4>
+                                <small>Regular</small>
+                            </div>
+                        </div>
+                        <div class="cart-item-controls">
+                            <div class="quantity-control">
+                                <button>-</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+                            <span class="item-price">$ 75.00</span>
+                            <button class="remove-item">✕</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=80&h=80&fit=crop" alt="">
+                            <div>
+                                <h4>Polvorón de Nuez</h4>
+                                <small>Regular</small>
+                            </div>
+                        </div>
+                        <div class="cart-item-controls">
+                            <div class="quantity-control">
+                                <button>-</button>
+                                <span>5</span>
+                                <button>+</button>
+                            </div>
+                            <span class="item-price">$ 75.00</span>
+                            <button class="remove-item">✕</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=80&h=80&fit=crop" alt="">
+                            <div>
+                                <h4>Pastel de Chocolate</h4>
+                                <small>Regular</small>
+                            </div>
+                        </div>
+                        <div class="cart-item-controls">
+                            <div class="quantity-control">
+                                <button>-</button>
+                                <span>2</span>
+                                <button>+</button>
+                            </div>
+                            <span class="item-price">$ 160.00</span>
+                            <button class="remove-item">✕</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <img src="https://images.unsplash.com/photo-1601154564839-2f4d77afec58?w=80&h=80&fit=crop" alt="">
+                            <div>
+                                <h4>Galletas de Mantequilla</h4>
+                                <small>Regular</small>
+                            </div>
+                        </div>
+                        <div class="cart-item-controls">
+                            <div class="quantity-control">
+                                <button>-</button>
+                                <span>6</span>
+                                <button>+</button>
+                            </div>
+                            <span class="item-price">$ 120.00</span>
+                            <button class="remove-item">✕</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-footer">
+                    <div class="tax-row">
+                        <span>Impuestos (IVA 16%)</span>
+                        <span>$ 68.80</span>
+                    </div>
+                    <a href="#checkout-modal" class="pay-btn">
+                        <span>Pagar</span>
+                        <span>$ 498.80</span>
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>CONFIRMACIÓN DE COBRO</h3>
+                <a href="#">✕</a>
+            </div>
+            <div class="modal-body">
+                <p>Revisa el resumen de la transacción antes de confirmar el cobro:</p>
+                
+                <div class="modal-items">
+                    <div class="modal-item">
+                        <span>1x Pastel Selva Negra</span>
+                        <span><strong>$ 75.00</strong></span>
+                    </div>
+                    <div class="modal-item">
+                        <span>5x Polvorón de Nuez</span>
+                        <span><strong>$ 75.00</strong></span>
+                    </div>
+                    <div class="modal-item">
+                        <span>2x Pastel de Chocolate</span>
+                        <span><strong>$ 160.00</strong></span>
+                    </div>
+                    <div class="modal-item">
+                        <span>6x Galletas de Mantequilla</span>
+                        <span><strong>$ 120.00</strong></span>
+                    </div>
+                </div>
+
+                <div class="total-detail">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span>$ 430.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Impuestos (IVA 16%)</span>
+                        <span>$ 68.80</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total a Cobrar</span>
+                        <span>$ 498.80</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn-cancel">Cancelar</a>
+                <a href="#" class="btn-pay">Cobrar y Finalizar</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
