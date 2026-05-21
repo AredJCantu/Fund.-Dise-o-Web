@@ -14,27 +14,31 @@ html, body{
     background-color: var(--colorComplementario2);
     font-family: var(--fuente);
 }
-header{
+.main-nav{
     position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
-header nav{
+.main-nav nav{
     display: flex;
     justify-content: space-between;
     background-color: var(--colorPrimario);
+    height: 70px;
 }
-header nav img{
+.main-nav nav img{
     color: #fff;
-    width: 70px;
+    height: 50px;
     margin: 10px 20px;
 }
-header nav ul{
+.main-nav nav ul{
     display: flex;
     list-style: none;
     gap: 15px;
     padding: 0;
     margin: 0px 20px;
 }
-header nav ul a{
+.main-nav nav ul a{
     display: flex;
     padding: 5px;
     align-items: center;
@@ -46,10 +50,10 @@ header nav ul a{
     font-weight: normal;
     letter-spacing: 1px;
 }
-header nav ul a:hover{
+.main-nav nav ul a:hover{
     background-color: var(--suavePrimario);
 }
-header nav ul a.activo{
+.main-nav nav ul a.activo{
     background-color: var(--suavePrimario);
     font-weight: bold;
 }
