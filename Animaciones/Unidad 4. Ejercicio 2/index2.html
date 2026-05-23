@@ -22,11 +22,12 @@
         </div>
         
         <div class="user-menu">
-            <div class="user-label">
+            <input type="checkbox" id="chk-dropdown">
+            <label for="chk-dropdown" class="user-label">
                 <div class="avatar">V</div>
                 <span style="font-size: 0.75rem; font-weight: 600;">Victor</span>
                 <span class="arrow">▼</span>
-            </div>
+            </label>
             <div class="dropdown">
                 <div class="session-info">
                     <p>SESIÓN ACTIVA</p>
@@ -38,7 +39,7 @@
     </header>
 
     <div class="app-container">
-        <input type="checkbox" id="chk_sidebar">
+        <input checked type="checkbox" id="chk_sidebar">
         <aside class="sidebar">
             <nav>
                 <ul>
@@ -64,9 +65,14 @@
                         <h1>Menú de Repostería</h1>
                         <p>Selecciona los productos para agregarlos al pedido actual</p>
                     </div>
-                    <span class="product-count">Total: 15 productos</span>
+                    <section class="section-buttons">
+                        <label for="radioIzq">&lt;</label>
+                        <span class="product-count">Total: 15 productos</span>
+                        <label for="radioDer">&gt;</label>
+                    </section>
                 </div>
-
+                <input type="radio" id="radioIzq" checked name="c1">
+                <input type="radio" id="radioDer" name="c1">
                 <div class="carousel-container">
                     <div class="carousel-track">
                         <section class="carousel-page">
