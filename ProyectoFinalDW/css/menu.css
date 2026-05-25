@@ -1,8 +1,6 @@
 :root{
-    --colorPrimario:#0077b6;
+    --colorPrimario:#0077B6;
     --suavePrimario:#00b4d8;
-    --colorComplementario1:#FF8500;
-    --suaveComplementario1:#F49C4D;
     --colorComplementario2:#ECF0F1;
     --colorOscuro:#2F2F2F;
     --colorGris:#9F9F9F;
@@ -21,15 +19,30 @@ html, body{
     z-index: 10;
 }
 .main-nav nav{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     background-color: var(--colorPrimario);
-    height: 70px;
+    height: 90px;
 }
-.main-nav nav img{
-    color: #fff;
-    height: 50px;
-    margin: 10px 20px;
+.main-nav nav>a{
+    align-self: center;
+    text-decoration: none;
+    color: var(--colorComplementario2);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px 10px 10px 20px;
+}
+.main-nav nav>a span{
+    font-weight: bold;
+    margin-left: 10px;
+}
+.main-nav nav label{
+    display: none;
+}
+#chk-Dropdown-Movil{
+    display: none;
 }
 .main-nav nav ul{
     display: flex;
@@ -38,6 +51,7 @@ html, body{
     padding: 0;
     margin: 0px 20px;
 }
+
 .main-nav nav ul a{
     display: flex;
     padding: 5px;
@@ -58,9 +72,10 @@ html, body{
     font-weight: bold;
 }
 footer{
+    box-sizing: border-box;
     display: flex;
     background-color: var(--colorOscuro);
-    padding: 20px 5%;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -81,4 +96,70 @@ footer .social a{
 .footer .social a:hover{
     background-color: var(--colorGris);
     color: #454545;
+}
+@media (max-width:480px) {
+    .main-nav nav{
+        justify-content: space-between;
+        height: 40px;
+        width: 100%;
+    }
+    .main-nav nav > a{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        align-items: center;
+       font-size: 0.6em;
+       margin: 5px;
+    }
+    .main-nav nav>a span{
+        font-weight: bolder;
+    }
+    .main-nav nav .menu{
+    position: relative;
+    }
+    .main-nav nav label{
+        display: flex;
+        margin-right: 10px;
+        height: 100%;
+        font-size: 1.2em;
+        align-items: center;
+        color: var(--colorComplementario2);
+    }
+    .main-nav nav ul{
+        position: absolute;
+        top: 100%;
+        right: 5px;
+        display: none;
+        background-color: var(--colorPrimario);
+        visibility: collapse;
+        opacity: 0;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0px;
+    }
+    .main-nav nav ul a{
+        font-size: 0.6em;
+        text-align: center;
+    }
+    #chk-Dropdown-Movil:checked + ul{
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+    footer{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+    }
+    footer p{
+        font-size: 0.6em;
+        letter-spacing: normal;
+    }
+    footer .social a{
+        font-size: 0.7em;
+        margin: 0 5px;
+    }
 }
