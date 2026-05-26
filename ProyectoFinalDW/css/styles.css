@@ -28,9 +28,11 @@ body {
   color: var(--blanco);
   text-shadow: 3px 3px 2px var(--colorOscuro);
   text-align: center;
+  padding: 0 10px;
 }
 .hero img,
-.info-main .info-contacto img, .main-contacto img {
+.info-main .info-contacto img,
+.main-contacto img {
   width: 100%;
   object-fit: cover;
 }
@@ -95,10 +97,11 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-.info-main .info-contacto img , .main-contacto img{
+.info-main .info-contacto img,
+.main-contacto img {
   padding: 0;
 }
-.info-main .info-contacto a{
+.info-main .info-contacto a {
   display: flex;
   background-color: var(--naranja);
   color: #ffffff;
@@ -111,13 +114,14 @@ body {
 
 /*Noticias css*/
 .Titulo-gris h1 {
-  background-color: var(--colorOscuro);
+  background-color: var(--azulTitulos);
   color: var(--blanco);
   text-align: center;
   margin: 0;
   padding: 5px;
 }
-.noti-main section > h2 ,form h2{
+.noti-main section > h2,
+form h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -158,7 +162,8 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
 }
-.noti-content .cartas img , .fotos img{
+.noti-content .cartas img,
+.fotos img {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -268,14 +273,14 @@ body {
   background-color: var(--verdeOscuro);
 }
 .work-main .card label,
-.hero-text a , form input[type=submit]{
+.hero-text a,
+form input[type="submit"] {
   text-shadow: none;
   text-decoration: none;
   background-color: var(--naranja);
   padding: 5px;
   color: #ffffff;
   text-align: center;
-
 }
 
 .work-main .card label i {
@@ -289,28 +294,26 @@ body {
 
 #galeria {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
 }
-.galeria-contacto .cartas{
+.galeria-contacto .cartas {
   margin-top: 20px;
 }
 form {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 5px;
+  gap: 15px;
   padding: 10px;
   box-sizing: border-box;
 }
-form input{
+form input {
   border-radius: 10px;
   padding: 5px;
   font-size: 1.1em;
 }
 
-
 /*------------------Contacto -------------------------*/
-
-
-
 
 @media (max-width: 480px) {
   main {
@@ -323,13 +326,25 @@ form input{
   }
   .hero .hero-text {
     position: absolute;
+    z-index: 6;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000030;
+    z-index: 5;
   }
   .hero .hero-text h1,
   .noti-Titulo h1 {
     font-size: 2.2em;
   }
   .info-main .info-general h2,
-  .work-main h2, form h2 {
+  .work-main h2,
+  form h2 {
     font-size: 1.1em;
   }
   .info-main .info-general p,
@@ -338,15 +353,14 @@ form input{
     font-size: 0.9em;
   }
   .info-main .perfiles,
-  .info-main .info-contacto,
-  #galeria {
+  .info-main .info-contacto {
     grid-template-columns: 1fr;
   }
   .info-main .cartas h2 {
     margin: 10px 0;
     font-size: 1.2em;
   }
-  .cartas address{
+  .cartas address {
     font-size: 1em;
     word-break: break-all;
   }
@@ -358,10 +372,11 @@ form input{
     gap: 20px;
   }
   form label,
-  form h2,form input[type=submit] {
+  form h2,
+  form input[type="submit"] {
     grid-column: span 12;
   }
-  form label{
+  form label {
     display: flex;
     flex-direction: column;
     gap: 10px;

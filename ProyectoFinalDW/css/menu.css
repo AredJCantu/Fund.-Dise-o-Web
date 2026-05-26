@@ -1,167 +1,168 @@
-:root{
-    --colorPrimario:#0077B6;
-    --suavePrimario:#00b4d8;
-    --colorComplementario2:#ECF0F1;
-    --colorOscuro:#2F2F2F;
-    --colorGris:#9F9F9F;
-    --fuente:'Arial';
+:root {
+  --colorPrimario: #0077b6;
+  --suavePrimario: #00b4d8;
+  --colorComplementario2: #ecf0f1;
+  --colorOscuro: #2f2f2f;
+  --colorGris: #9f9f9f;
+  --fuente: "Arial";
 }
-html, body{
-    padding: 0;
-    margin: 0;
-    background-color: var(--colorComplementario2);
-    font-family: var(--fuente);
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--colorComplementario2);
+  font-family: var(--fuente);
 }
-.main-nav{
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
+.main-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
-.main-nav nav{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--colorPrimario);
-    height: 90px;
+.main-nav nav {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--colorPrimario);
+  height: 90px;
+  padding: 0 15px;
+  z-index: inherit;
 }
-.main-nav nav>a{
-    align-self: center;
-    text-decoration: none;
-    color: var(--colorComplementario2);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 10px 10px 10px 20px;
+.main-nav nav > a {
+  align-self: center;
+  text-decoration: none;
+  color: var(--colorComplementario2);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.main-nav nav>a span{
-    font-weight: bold;
-    margin-left: 10px;
+.main-nav nav > a span {
+  font-weight: bold;
+  margin-left: 10px;
 }
-.main-nav nav label{
-    display: none;
-}
-#chk-Dropdown-Movil{
-    display: none;
-}
-.main-nav nav ul{
-    display: flex;
-    height: 100%;
-    list-style: none;
-    gap: 15px;
-    padding: 0;
-    margin: 0px 20px;
+.main-nav nav label,
+#chk-Dropdown-Movil {
+  display: none;
 }
 
-.main-nav nav ul a{
-    display: flex;
-    padding: 5px;
-    align-items: center;
-    height: calc(100% - 10px);
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    font-family: var(--fuente);
-    font-weight: normal;
-    letter-spacing: 1px;
+.main-nav nav ul {
+  display: flex;
+  height: 100%;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: 0px 20px;
 }
-.main-nav nav ul a:hover{
-    background-color: var(--suavePrimario);
+.main-nav nav ul a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  height: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-family: var(--fuente);
+  font-weight: normal;
+  letter-spacing: 1px;
 }
-.main-nav nav ul a.activo{
-    background-color: var(--suavePrimario);
-    font-weight: bold;
+.main-nav nav ul a:hover {
+  background-color: var(--suavePrimario);
 }
-footer{
-    box-sizing: border-box;
-    display: flex;
-    background-color: var(--colorOscuro);
-    padding: 20px;
+.main-nav nav ul a.activo {
+  background-color: var(--suavePrimario);
+  font-weight: bold;
+}
+footer {
+  box-sizing: border-box;
+  display: flex;
+  background-color: var(--colorOscuro);
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  color: var(--colorGris);
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+footer .social a {
+  margin: 0 10px;
+  background-color: #454545;
+  color: var(--colorGris);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 50%;
+}
+.footer .social a:hover {
+  background-color: var(--colorGris);
+  color: #454545;
+}
+@media (max-width: 480px) {
+  .main-nav nav {
     justify-content: space-between;
+    height: 50px;
+    width: 100%;
+  }
+  .main-nav nav > a {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     align-items: center;
-}
-footer p{
-    color: var(--colorGris);
-    font-size: small;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-footer .social a{
-    margin: 0 10px;
-    background-color: #454545; 
-    color: var(--colorGris);
-    text-decoration: none; 
-    padding: 10px;
-    border-radius: 50%;
-}
-.footer .social a:hover{
-    background-color: var(--colorGris);
-    color: #454545;
-}
-@media (max-width:480px) {
-    .main-nav nav{
-        justify-content: space-between;
-        height: 40px;
-        width: 100%;
-    }
-    .main-nav nav > a{
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        align-items: center;
-       font-size: 0.6em;
-       margin: 5px;
-    }
-    .main-nav nav>a span{
-        font-weight: bolder;
-    }
-    .main-nav nav .menu{
+    font-size: 0.6em;
+    margin: 5px;
+  }
+  .main-nav nav > a span {
+    font-weight: bolder;
+  }
+  .main-nav nav .menu {
     position: relative;
+  }
+  .main-nav nav label {
+    display: block;
     height: 100%;
-    }
-    .main-nav nav label{
-        display: flex;
-        margin-right: 10px;
-        height: 100%;
-        font-size: 1.2em;
-        align-items: center;
-        color: var(--colorComplementario2);
-    }
-    .main-nav nav ul{
-        position: absolute;
-        top: 100%;
-        right: 5px;
-        display: none;
-        background-color: var(--colorPrimario);
-        visibility: collapse;
-        opacity: 0;
-        flex-direction: column;
-        gap: 5px;
-        margin: 0px;
-    }
-    .main-nav nav .menu ul a{
-        font-size: 0.6em;
-        text-align: center;
-    }
-    #chk-Dropdown-Movil:checked + ul{
-        display: flex;
-        visibility: visible;
-        opacity: 1;
-    }
-    footer{
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 10px;
-    }
-    footer p{
-        font-size: 0.6em;
-        letter-spacing: normal;
-    }
-    footer .social a{
-        font-size: 0.7em;
-        margin: 0 5px;
-    }
+    font-size: 1.2em;
+    align-content: center;
+    color: var(--colorComplementario2);
+  }
+  .main-nav nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    opacity: 0;
+    background-color: var(--colorPrimario);
+    flex-direction: column;
+    gap: 5px;
+    margin: 0px;
+    height: fit-content;
+  }
+  .main-nav nav .menu ul a {
+    font-size: 0.8em;
+    padding: 10px;
+    height: auto;
+  }
+  #chk-Dropdown-Movil:checked + ul {
+    display: flex;
+    opacity: 1;
+  }
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+  }
+  footer p {
+    font-size: 0.6em;
+    letter-spacing: normal;
+  }
+  footer .social a {
+    font-size: 0.7em;
+    margin: 0 5px;
+  }
 }
