@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+ min-width: min(95%, 1200px);
+  background: #f5f5f5;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #242526;
+  z-index: 99;
+}
+
+.nav-container {
+  width: min(95%, 1200px);
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a , .logo label{
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+input[type=checkbox], .logo label{
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background: #3A3B3C;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #242526;
+  width: 200px;
+  padding: 10px 0;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+.dropdown:hover .drop-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 120%;
+}
+
+.drop-menu li a {
+  display: block;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+
+.mega-dropdown {
+  position: static;
+}
+
+.mega-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #242526;
+  border-radius: 0 0 12px 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mega-dropdown:hover .mega-box {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+
+.mega-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 30px;
+  width: min(95%, 1200px);
+  margin: 0 auto;
+}
+
+.mega-row img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.mega-row h3 {
+  color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.mega-links {
+  list-style: none;
+}
+
+.mega-links li a {
+  display: block;
+  padding: 8px 0;
+  color: #d9d9d9;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.mega-links li a:hover {
+  color: white;
+}
+
+main {
+  width: min(95%, 1200px);
+  margin: 90px auto 0;
+  padding: 40px 0;
+}
+
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 40px;
+  border-radius: 24px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: max(1.8rem, 4vw);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 24px;
+  opacity: 0.95;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 24px;
+}
+
+.card-body h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #242526;
+}
+
+.card-body p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #5a67d8;
+}
+
+.demo-section {
+  background: #e8e8f0;
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 50px;
+}
+
+.demo-section h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #242526;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.demo-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.demo-card h3 {
+  font-size: 20px;
+  color: #667eea;
+  margin-bottom: 12px;
+}
+
+.demo-card code {
+  background: #e0e0e0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.demo-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #764ba2;
+}
+
+footer {
+ width: min(95%, 1200px);
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  background: #242526;
+  color: #f2f2f2;
+  border-radius: 20px 20px 0 0;
+}

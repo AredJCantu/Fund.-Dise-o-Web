@@ -30,16 +30,16 @@ body {
   text-align: center;
 }
 .hero img,
-.info-main .info-contacto img {
+.info-main .info-contacto img, .main-contacto img {
   width: 100%;
   object-fit: cover;
 }
 .info-main,
 .noti-main,
 .work-main,
-.galeria-main {
+.galeria-main,
+.main-contacto {
   margin: 30px 5%;
-  background-color: red;
 }
 .info-main .info-general h2,
 .work-main h2 {
@@ -64,6 +64,7 @@ body {
   margin-top: 20px;
 }
 .cartas {
+  margin-top: 10px;
   border: 1px unset black;
   border-radius: 10px;
   padding: 10px 20px;
@@ -94,10 +95,10 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-.info-main .info-contacto img {
+.info-main .info-contacto img , .main-contacto img{
   padding: 0;
 }
-.info-main .info-contacto a {
+.info-main .info-contacto a{
   display: flex;
   background-color: var(--naranja);
   color: #ffffff;
@@ -106,7 +107,6 @@ body {
   text-decoration: none;
   margin: 10px 0;
   justify-self: flex-end;
-  width: fit-content;
 }
 
 /*Noticias css*/
@@ -117,7 +117,7 @@ body {
   margin: 0;
   padding: 5px;
 }
-.noti-main section > h2 {
+.noti-main section > h2 ,form h2{
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -128,9 +128,6 @@ body {
   gap: 60px;
   border-bottom: 1px solid black;
   padding-bottom: 30px;
-}
-.noti-content .cartas {
-  padding: 0;
 }
 
 .noti-content .cartas {
@@ -161,7 +158,7 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
 }
-.noti-content .cartas img {
+.noti-content .cartas img , .fotos img{
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -271,14 +268,14 @@ body {
   background-color: var(--verdeOscuro);
 }
 .work-main .card label,
-.hero-text a {
+.hero-text a , form input[type=submit]{
   text-shadow: none;
   text-decoration: none;
   background-color: var(--naranja);
   padding: 5px;
   color: #ffffff;
   text-align: center;
-  width: 100px;
+
 }
 
 .work-main .card label i {
@@ -287,24 +284,37 @@ body {
 .work-main .card input[type="checkbox"]:checked ~ label i {
   transform: rotate(180deg);
 }
+
+/*Galeria -------------*/
+
 #galeria {
   display: grid;
 }
-#galeria img {
-  width: 100%;
-  object-fit: cover;
+.galeria-contacto .cartas{
+  margin-top: 20px;
 }
-.galeria-contacto form {
+form {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 10px;
-  background-color: rebeccapurple;
+  gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
 }
+form input{
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+
+/*------------------Contacto -------------------------*/
+
+
+
 
 @media (max-width: 480px) {
   main {
     padding-bottom: 60px;
-    width: 100%;
   }
   .hero {
     height: 400px;
@@ -319,7 +329,7 @@ body {
     font-size: 2.2em;
   }
   .info-main .info-general h2,
-  .work-main h2 {
+  .work-main h2, form h2 {
     font-size: 1.1em;
   }
   .info-main .info-general p,
@@ -336,6 +346,10 @@ body {
     margin: 10px 0;
     font-size: 1.2em;
   }
+  .cartas address{
+    font-size: 1em;
+    word-break: break-all;
+  }
   .info-main .info-contacto a {
     font-size: small;
   }
@@ -344,14 +358,12 @@ body {
     gap: 20px;
   }
   form label,
-  form h2 {
+  form h2,form input[type=submit] {
     grid-column: span 12;
   }
-  form label input {
-    width: 100%;
-  }
-  form label[for="imgs"],
-  form input[type="submit"] {
-    grid-column: span 6;
+  form label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }

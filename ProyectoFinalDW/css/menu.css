@@ -46,6 +46,7 @@ html, body{
 }
 .main-nav nav ul{
     display: flex;
+    height: 100%;
     list-style: none;
     gap: 15px;
     padding: 0;
@@ -116,6 +117,7 @@ footer .social a{
     }
     .main-nav nav .menu{
     position: relative;
+    height: 100%;
     }
     .main-nav nav label{
         display: flex;
@@ -137,7 +139,7 @@ footer .social a{
         gap: 5px;
         margin: 0px;
     }
-    .main-nav nav ul a{
+    .main-nav nav .menu ul a{
         font-size: 0.6em;
         text-align: center;
     }
