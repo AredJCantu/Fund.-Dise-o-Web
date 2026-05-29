@@ -101,7 +101,8 @@ footer .social a {
   background-color: var(--colorGris);
   color: #454545;
 }
-@media (max-width: 480px) {
+/*Movil y tablet comparten el mismo menu*/
+@media (max-width:780px)  {
   .main-nav nav {
     justify-content: space-between;
     height: 50px;

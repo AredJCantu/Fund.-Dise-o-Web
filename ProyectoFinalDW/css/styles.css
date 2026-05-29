@@ -59,6 +59,7 @@ main{
 .info-main .info-contacto img,
 .main-contacto img {
   width: 100%;
+  display: block;
   object-fit: cover;
 }
 .info-main,
@@ -84,14 +85,13 @@ h2{
   border-bottom: 1px solid black;
 }
 .info-main .perfiles,
-.info-main .info-contacto, .noti-main .noti-content {
+.info-contacto, .noti-main .noti-content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 15px;
   margin-top: 20px;
 }
 .cartas {
-  margin-top: 10px;
   border: 1px unset black;
   border-radius: 10px;
   padding: 10px 20px;
@@ -180,10 +180,10 @@ h2{
   font-weight: bold;
   letter-spacing: 2px;
 }
-.noti-content .cartas img, .eventos-main .cartas img ,
-.fotos img {
+.noti-content .cartas img, .eventos-main .cartas img{
   width: 100%;
   height: 200px;
+  display: block;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
 }
@@ -317,10 +317,29 @@ h2{
 
 #galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  background-color: black;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  background-color: var(--colorOscuro); 
+  padding: 20px;
+  border-radius: 10px; 
+}
+
+.fotos {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px #00000070; 
+}
+
+.fotos img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block; 
+  transition: transform 0.4s ease;
+}
+
+.fotos:hover img {
+  transform: scale(1.1);
 }
 .galeria-contacto .cartas {
   margin-top: 20px;
@@ -358,7 +377,6 @@ form input[type="submit"] {
   text-align: center;
 }
 
-/*------------------Contacto -------------------------*/
 
 
 
