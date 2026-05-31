@@ -19,10 +19,10 @@ body {
   padding: 0;
   margin: 0;
 }
-main{
- opacity: 0;
+main {
+  opacity: 0;
   animation: caida 0.5s ease-out forwards;
-    padding-bottom: 60px;
+  padding-bottom: 60px;
 }
 .hero {
   height: 400px;
@@ -32,16 +32,16 @@ main{
   justify-content: center;
   margin-bottom: 20px;
 }
-  .hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000030;
-    z-index: 5;
-  }
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000030;
+  z-index: 5;
+}
 .hero .hero-text {
   position: absolute;
   z-index: 6;
@@ -52,9 +52,9 @@ main{
   padding: 0 10px;
 }
 .hero .hero-text h1,
-  .noti-Titulo h1 {
-    font-size: 3.5rem;
-  }
+.noti-Titulo h1 {
+  font-size: 3.5rem;
+}
 .hero img,
 .info-main .info-contacto img,
 .main-contacto img {
@@ -66,26 +66,29 @@ main{
 .noti-main,
 .work-main,
 .galeria-main,
-.main-contacto, .eventos-main {
+.main-contacto,
+.eventos-main {
   margin: 30px 5%;
 }
-h2{
+h2 {
   color: var(--azulTitulos);
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .info-main .info-general p,
-.work-main > p {
+.work-main > p,
+.Eventos p {
   padding-bottom: 20px;
-  font-size: small;
+  font-size: 1.3rem;
   color: var(--colorOscuro);
   letter-spacing: 1px;
   border-bottom: 1px solid black;
 }
 .info-main .perfiles,
-.info-contacto, .noti-main .noti-content {
+.info-contacto,
+.noti-main .noti-content {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
@@ -106,8 +109,8 @@ h2{
   padding: 0;
   padding-left: 5%;
 }
-.info-main .perfiles div ul li ,.carrusel article p
-{
+.info-main .perfiles div ul li,
+.carrusel article blockquote {
   margin: 5px 0;
   text-wrap-mode: wrap;
   letter-spacing: 1px;
@@ -154,7 +157,8 @@ h2{
   padding-bottom: 30px;
 }
 
-.noti-content .cartas, .eventos-main .cartas {
+.noti-content .cartas,
+.eventos-main .cartas {
   display: flex;
   flex-direction: column-reverse;
   grid-column: span 4;
@@ -162,16 +166,18 @@ h2{
   margin: 0;
   padding: 0;
 }
-.noti-content .cartas header , .eventos-main .cartas header{
+.noti-content .cartas header,
+.eventos-main .cartas header {
   display: flex;
   justify-content: space-between;
   margin: 10px 20px;
 }
-.noti-content .cartas h2 , .eventos-main .cartas h2{
-  margin: 0;
-  padding: 5px;
+.cartas h3 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-align: left;
 }
-.noti-content .cartas .Fecha , .eventos-main .cartas .Fecha{
+.noti-content .cartas .Fecha {
   background-color: var(--azulOscuro);
   color: var(--blanco);
   padding: 5px 10px;
@@ -179,15 +185,19 @@ h2{
   align-self: center;
   font-weight: bold;
   letter-spacing: 2px;
+  flex-shrink: 0;
+  margin-left: 5px;
 }
-.noti-content .cartas img, .eventos-main .cartas img{
+.noti-content .cartas img,
+.eventos-main .cartas img {
   width: 100%;
   height: 200px;
   display: block;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
 }
-.noti-content .cartas p, .eventos-main .cartas p ,
+.noti-content .cartas p,
+.eventos-main .cartas p,
 .work-main .card .contenedor p {
   opacity: 0;
   max-height: 0px;
@@ -200,20 +210,22 @@ h2{
     margin 0.5s ease-in;
   transform: translateY(-10px);
 }
-.noti-content .cartas:hover, .eventos-main .cartas:hover {
+.noti-content .cartas:hover,
+.eventos-main .cartas:hover {
   transform: scale(1.1);
 }
-.noti-content .cartas:focus{
+.noti-content .cartas:focus {
   height: fit-content;
 }
-.noti-content .cartas:focus p, .work-main .card input[type=checkbox]:checked ~ .contenedor p{
+.noti-content .cartas:focus p,
+.work-main .card input[type="checkbox"]:checked ~ .contenedor p {
   opacity: 1;
   overflow: hidden;
   max-height: 500px;
   margin: 10px 20px;
   transform: translateY(0px);
 }
-.work-main .card input[type=checkbox]:checked ~ label{
+.work-main .card input[type="checkbox"]:checked ~ label {
   align-self: flex-start;
 }
 .noti-main .cartas:focus {
@@ -271,7 +283,7 @@ h2{
   border-top: 5px solid var(--colorPrimario);
   padding: 10px;
   padding-bottom: 50px;
-  display:flex;
+  display: flex;
   align-items: center;
   margin: 0;
   margin-bottom: 30px;
@@ -292,49 +304,48 @@ h2{
   padding: 5px;
   color: #ffffff;
 }
-.work-main .card label{
-    flex-shrink: 0;
-  } 
+.work-main .card label {
+  flex-shrink: 0;
+}
 
 .work-main .card label i {
   transition: transform 0.2s ease;
 }
-.work-main .card input[type=checkbox]:checked ~ label i {
+.work-main .card input[type="checkbox"]:checked ~ label i {
   transform: rotate(180deg);
 }
-#salario-jr {
+.salario-jr {
   background-color: var(--verdeSuave);
 }
-#salario-mid {
+.salario-mid {
   background-color: var(--verde);
 }
-#salario-sr {
+.salario-sr {
   background-color: var(--verdeOscuro);
 }
 
-
 /*Galeria -------------*/
 
-#galeria {
+.galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  background-color: var(--colorOscuro); 
+  background-color: var(--colorOscuro);
   padding: 20px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .fotos {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px #00000070; 
+  box-shadow: 0 4px 8px #00000070;
 }
 
 .fotos img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  display: block; 
+  display: block;
   transition: transform 0.4s ease;
 }
 
@@ -351,17 +362,18 @@ form {
   padding: 10px;
   box-sizing: border-box;
 }
-  form label,
-  form h2,
-  form input[type="submit"] {
-    grid-column: span 12;
-  }
-  form label {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-form input, textarea {
+form label,
+form h2,
+form input[type="submit"] {
+  grid-column: span 12;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form input,
+textarea {
   border-radius: 10px;
   padding: 5px;
   font-size: 1.1em;
@@ -377,20 +389,41 @@ form input[type="submit"] {
   text-align: center;
 }
 
-
-
-
 /*--------------Animaciones-----------------------*/
 @keyframes caida {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(-30px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: none;
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 780px) {
+  body {
+    font-size: 2rem;
+  }
+  .hero .hero-text h1 {
+    font-size: 4.5rem;
+  }
+  .info-main .perfiles div ul li,
+  .carrusel article blockquote {
+    margin: 10px 0;
+    font-size: 1.3rem;
+  }
+  .info-main .info-contacto a {
+    padding: 10px 20px;
+    margin: 15px 0;
+    font-size: 1.3rem;
+  }
+  .info-main,
+  .noti-main,
+  .work-main,
+  .galeria-main,
+  .main-contacto,
+  .eventos-main {
+    margin: 30px 10%;
+  }
 }
