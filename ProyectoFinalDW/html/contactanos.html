@@ -1,77 +1,111 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contactanos</title>
-  <link rel="stylesheet" href="../css/menu.css" />
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-</head>
-
-<body>
-  <header class="main-nav">
-    <nav>
-      <a href="index.html">Tecnológico Nacional de México <span>·Carbonífera·</span></a>
-      <div class="menu">
-        <label for="chk-Dropdown-Movil"><i class="fa-solid fa-bars"></i></label>
-        <input type="checkbox" id="chk-Dropdown-Movil" />
-        <ul>
-          <li><a href="index.html">Informacion</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="campo_laboral.html">Campo laboral</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="contactanos.html" class="activo">Contáctanos</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="Titulo-gris">
-      <h1>Contáctanos</h1>
-    </section>
-    <div class="main-contacto">
-      <section>
-        <form action="POST">
-                <h2>Contáctanos</h2>
-                <label for="nombre">Nombre<input id="nombre" placeholder="Jared" type="text" name="nombre"></label>
-                <label for="apellido">Apellido<input id="apellido" placeholder="Cantú" type="text" name="apellido"></label>
-                <label for="correo">Correo<input id="correo" placeholder="Jared@gmail.com" type="text" name="correo"></label>
-                <label for="comentario">Comentario <textarea name="comentario" id="comentario" rows="5"></textarea></label>
-                <input type="submit" value="Enviar">
-            </form>
-        <article class="info-contacto">
+  <body>
+    <header class="main-nav">
+      <nav>
+        <a href="index.html"
+          >Tecnológico Nacional de México <span>·Carbonífera·</span></a
+        >
+        <div class="menu">
+          <label for="chk-Dropdown-Movil"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <input type="checkbox" id="chk-Dropdown-Movil" />
+          <ul>
+            <li><a href="index.html">Informacion</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="campo_laboral.html">Campo laboral</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="contactanos.html" class="activo">Contáctanos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="Titulo-gris">
+        <h1>Contáctanos</h1>
+      </section>
+      <div class="main-contacto">
+        <section>
+          <form action="#" method="POST">
+            <h2>Contáctanos</h2>
+            <label for="nombre"
+              >Nombre<input
+                id="nombre"
+                placeholder="Jared"
+                type="text"
+                name="nombre"
+            /></label>
+            <label for="apellido"
+              >Apellido<input
+                id="apellido"
+                placeholder="Cantú"
+                type="text"
+                name="apellido"
+            /></label>
+            <label for="correo"
+              >Correo<input
+                id="correo"
+                placeholder="Jared@gmail.com"
+                type="text"
+                name="correo"
+            /></label>
+            <label for="comentario"
+              >Comentario
+              <textarea name="comentario" id="comentario" rows="5"></textarea>
+            </label>
+            <input type="submit" value="Enviar" />
+          </form>
+          <article class="info-contacto">
+            <div class="cartas">
+              <p>¡QUEREMOS SABER TU OPINIÓN!</p>
+              <p>Cualquier duda o comentario, no dudes en contactarnos.</p>
+            </div>
+            <div class="cartas">
+              <p>📍 Carretera 57 Km 120Villa de Agujita, Coahuila MX</p>
+            </div>
+          </article>
+        </section>
+        <section class="info-contacto">
           <div class="cartas">
-          <p>¡QUEREMOS SABER TU OPINIÓN!</p>
-          <p>Cualquier duda o comentario, no dudes en contactarnos.</p>
-        </div>
-        <div class="cartas">
-          <p>📍 Carretera 57 Km 120Villa de Agujita, Coahuila MX</p>
-        </div>
+            <p>Email coordinacion:</p>
+            <address>sistemas@rcarbonifera.tecnm.mx</address>
+          </div>
+          <div class="cartas">
+            <p>Telefono:</p>
+            <address>861-112-2345</address>
+          </div>
+          <img class="cartas" src="../src/maps.png" alt="Mapa-Itesrc" />
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>© Copyright 2026 ITESRC</p>
+      <section class="social">
+        <a href="https://www.facebook.com/share/1C9i522ztX/"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/itesrc?igsh=NXl2ODNqcXR5NnZj"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://x.com/TecNM_MX&ved=2ahUKEwijzcWr3uSUAxXhk2oFHU9vD5gQFnoECCUQAQ&usg=AOvVaw2UYQX-BnqDh5M2XOe3R0oT"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
       </section>
-      <section class="info-contacto">
-        <div class="cartas">
-          <p>Telefono:</p>
-          <address>861-112-2345</address>
-        </div>
-        <div class="cartas">
-          <p>Email coordinacion:</p>
-          <address>sistemas@rcarbonifera.tecnm.mx</address>
-        </div>
-          <img class="cartas" src="../src//maps.png" alt="Mapa-Itesrc" />
-      </section>
-    </div>
-  </main>
-  <footer>
-    <p>© Copyright 2026 - 2026 ITESRC</p>
-    <section class="social">
-      <a href=""><i class="fa-brands fa-facebook"></i></a>
-      <a href=""><i class="fa-brands fa-instagram"></i></a>
-      <a href=""><i class="fa-brands fa-twitter"></i></a>
-    </section>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

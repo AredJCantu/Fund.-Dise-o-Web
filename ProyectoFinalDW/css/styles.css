@@ -39,7 +39,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #00000030;
+  background-color: #00000060;
   z-index: 5;
 }
 .hero .hero-text {
@@ -50,6 +50,9 @@ main {
   text-shadow: 3px 3px 2px var(--colorOscuro);
   text-align: center;
   padding: 0 10px;
+}
+.hero .hero-text p {
+  font-size: 2rem;
 }
 .hero .hero-text h1,
 .noti-Titulo h1 {
@@ -75,7 +78,7 @@ h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 .info-main .info-general p,
 .work-main > p,
@@ -95,7 +98,7 @@ h2 {
   margin-top: 20px;
 }
 .cartas {
-  border: 1px unset black;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 10px 20px;
   box-shadow: 0 0 5px black;
@@ -112,7 +115,7 @@ h2 {
 .info-main .perfiles div ul li,
 .carrusel article blockquote {
   margin: 5px 0;
-  text-wrap-mode: wrap;
+  text-wrap: wrap;
   letter-spacing: 1px;
   font-size: small;
   font-weight: 500;
@@ -150,27 +153,19 @@ h2 {
   padding: 5px;
 }
 .noti-main .noti-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
   border-bottom: 1px solid black;
   padding-bottom: 30px;
 }
 
 .noti-content .cartas,
 .eventos-main .cartas {
-  display: flex;
-  flex-direction: column-reverse;
-  grid-column: span 4;
-  transition: all 0.4s ease;
   margin: 0;
   padding: 0;
 }
-.noti-content .cartas header,
-.eventos-main .cartas header {
+.noti-content .cartas header {
   display: flex;
   justify-content: space-between;
-  margin: 10px 20px;
+  margin: 0px 20px;
 }
 .cartas h3 {
   font-size: 1.3rem;
@@ -194,7 +189,7 @@ h2 {
   height: 200px;
   display: block;
   object-fit: cover;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0 0 5px 5px;
 }
 .noti-content .cartas p,
 .eventos-main .cartas p,
@@ -401,17 +396,24 @@ form input[type="submit"] {
   }
 }
 
-@media (min-width: 481px) and (max-width: 780px) {
-  body {
+@media (min-width: 481px) {
+  body,
+  .hero .hero-text,
+  .cartas address,
+  .cartas h3 {
     font-size: 2rem;
   }
   .hero .hero-text h1 {
     font-size: 4.5rem;
   }
   .info-main .perfiles div ul li,
-  .carrusel article blockquote {
-    margin: 10px 0;
+  .carrusel article blockquote,
+  .noti-content .cartas p,
+  .work-main .card .contenedor p {
     font-size: 1.3rem;
+  }
+  .info-main .perfiles div ul li {
+    margin: 20px 0;
   }
   .info-main .info-contacto a {
     padding: 10px 20px;
@@ -425,5 +427,90 @@ form input[type="submit"] {
   .main-contacto,
   .eventos-main {
     margin: 30px 10%;
+  }
+  .work-main .card {
+    padding-bottom: 80px;
+  }
+  .work-main .card ul {
+    gap: 20px;
+  }
+  .galeria-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  form {
+    grid-column: span 2;
+    padding: 30px 5%;
+  }
+  .galeria-main #galeria,
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .work-main .carrusel {
+    gap: 40px;
+    margin: 30px 0;
+  }
+  .work-main .carrusel article img {
+    width: 80%;
+  }
+  .main-contacto section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+  }
+  .main-contacto form {
+    grid-row: span 2;
+    grid-column: 1;
+  }
+  .info-contacto {
+    grid-row: span 2;
+  }
+  .main-contacto .info-contacto .cartas {
+    align-content: center;
+    text-align: center;
+  }
+  .info-contacto img {
+    grid-column: span 2;
+  }
+}
+/*Desktop*/
+@media (min-width: 981px) {
+  body,
+  .hero .hero-text,
+  .cartas address,
+  .cartas h3 {
+    font-size: 1.5rem;
+  }
+  .hero {
+    height: 500px;
+  }
+  .hero .hero-text h1 {
+    font-size: 4.5rem;
+  }
+  .info-main .perfiles,
+  .info-main .info-contacto {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+  }
+  .info-main .info-contacto img {
+    grid-column: 2;
+    height: 100%;
+  }
+  .noti-main .noti-content,
+  .galeria-main #galeria,
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+  .galeria-contacto {
+    grid-template-columns: 2fr 1fr;
+  }
+  .work-main .carrusel {
+    gap: 60px;
+  }
+  .work-main .carrusel article img {
+    width: 60%;
   }
 }
