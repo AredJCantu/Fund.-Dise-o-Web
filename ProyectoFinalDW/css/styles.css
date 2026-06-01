@@ -395,7 +395,7 @@ form input[type="submit"] {
     transform: none;
   }
 }
-
+/*Que agarre los estilos desde tablet*/
 @media (min-width: 481px) {
   body,
   .hero .hero-text,
@@ -476,7 +476,7 @@ form input[type="submit"] {
   }
 }
 /*Desktop*/
-@media (min-width: 981px) {
+@media (min-width: 1024px) {
   body,
   .hero .hero-text,
   .cartas address,
